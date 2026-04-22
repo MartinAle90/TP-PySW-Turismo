@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <title>Contacto — Turismo en Jujuy</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header class="encabezado">
+            <div class="contenedor navegacion">
+                <a href="index.html" class="logo">
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
+                    </svg>
+                    DestinoJujuy
+                </a>
+                <input
+                    type="checkbox"
+                    id="menu-toggle"
+                    class="menu-toggle"
+                    role="alert"
+                    aria-live="polite"
+                />
+                <label for="menu-toggle" class="menu-icono">&#9776;</label>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li>
+                            <a href="destinos.html">Destinos &#9662;</a>
+                            <ul class="submenu">
+                                <li><a href="destinos.html">Ver Todos</a></li>
+                                <li><a href="#">Quebrada</a></li>
+                                <li><a href="#">Yungas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="agencias.html">Agencias</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button
+                    id="boton-tema"
+                    class="boton-oscuro"
+                    aria-label="Cambiar modo claro/oscuro"
+                >
+                    🌙 / ☀️
+                </button>
+            </div>
+        </header>
+
+        <main class="seccion contenedor">
+            <h1 class="titulo-seccion">Envianos tu consulta</h1>
+            <p style="text-align: center; margin-bottom: 2rem">
+                Y nos pondremos en contacto contigo lo antes posible.
+            </p>
+
+            <form id="formulario-contacto" class="formulario-contacto">
+                <div class="grupo-form">
+                    <label for="nombre">Nombre completo *</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required
+                        minlength="3"
+                        placeholder="Ingresá al menos 3 caracteres"
+                        role="alert"
+                        aria-live="polite"
+                    />
+                </div>
+
+                <div class="grupo-form">
+                    <label for="email">Correo electrónico *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="tu@correo.com"
+                        role="alert"
+                        aria-live="polite"
+                    />
+                </div>
+
+                <div class="grupo-form">
+                    <label for="asunto">Destino de interés *</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="" disabled selected>
+                            Seleccioná una opción
+                        </option>
+                        <option value="Purmamarca">Purmamarca</option>
+                        <option value="Tilcara">Tilcara</option>
+                        <option value="Salinas Grandes">Salinas Grandes</option>
+                        <option value="Otro">Otro destino</option>
+                    </select>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="5"
+                        required
+                        minlength="10"
+                        placeholder="Escribí tu consulta aquí..."
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="boton">
+                    Enviar Mensaje <span class="spinner"></span>
+                </button>
+            </form>
+
+            <!-- Modal Confirmación -->
+            <div id="modal-exito" class="modal-exito">
+                <h2>¡Tu mensaje se envió con éxito!</h2>
+                <p>Nos contactaremos a la brevedad.</p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="pie-pagina">
+            <div class="contenedor pie-columnas">
+                <div class="pie-columna">
+                    <h3>Newsletter</h3>
+                    <p>Recibí ofertas únicas para visitar Jujuy.</p>
+                    <form class="form-suscripcion">
+                        <input
+                            type="email"
+                            placeholder="Tu email"
+                            role="alert"
+                            aria-live="polite"
+                            required
+                        />
+                        <button type="submit">Suscribir</button>
+                    </form>
+                </div>
+                <div class="pie-columna">
+                    <h3>Seguinos</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="pie-columna">
+                    <h3>Ubicación</h3>
+                    <p>San Salvador de Jujuy, Argentina</p>
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+                        width="100%"
+                        height="150"
+                        style="border: 0"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </div>
+            <div
+                style="
+                    text-align: center;
+                    border-top: 1px solid var(--color-borde);
+                    padding-top: 1rem;
+                "
+            >
+                &copy; 2026 DestinoJujuy - TP1.
+            </div>
+        </footer>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
