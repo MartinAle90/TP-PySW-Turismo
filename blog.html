@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <title>Blog — Turismo en Jujuy</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header class="encabezado">
+            <div class="contenedor navegacion">
+                <a href="index.html" class="logo">
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
+                    </svg>
+                    DestinoJujuy
+                </a>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                <label for="menu-toggle" class="menu-icono">&#9776;</label>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li>
+                            <a href="destinos.html">Destinos &#9662;</a>
+                            <ul class="submenu">
+                                <li><a href="destinos.html">Ver Todos</a></li>
+                                <li><a href="#">Quebrada</a></li>
+                                <li><a href="#">Yungas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="agencias.html">Agencias</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button
+                    id="boton-tema"
+                    class="boton-oscuro"
+                    aria-label="Cambiar modo claro/oscuro"
+                >
+                    🌙 / ☀️
+                </button>
+            </div>
+        </header>
+
+        <main class="seccion contenedor">
+            <h1 class="titulo-seccion">Blog y Noticias</h1>
+
+            <div class="seccion-blog">
+                <div>
+                    <article class="articulo-blog">
+                        <img src="assets\purmamarca.jpg" alt="Noticia 1" />
+                        <h2>Preparativos para el Festival de la Quebrada</h2>
+                        <p
+                            style="
+                                color: var(--color-resalte);
+                                font-weight: bold;
+                                margin-bottom: 1rem;
+                            "
+                        >
+                            Cultura | Enero 2026
+                        </p>
+                        <p>
+                            La Quebrada de Humahuaca se prepara para uno de sus
+                            festivales culturales más importantes del año.
+                            Conocé cómo participar y la agenda completa.
+                        </p>
+
+                        <div class="comentarios">
+                            <h3>Comentarios (2)</h3>
+                            <div class="comentario-item">
+                                <div class="avatar">MA</div>
+                                <div>
+                                    <strong>Martina Álvarez</strong>
+                                    <p>Excelente! Este año no me lo pierdo.</p>
+                                </div>
+                            </div>
+                            <div class="comentario-item">
+                                <div class="avatar">CJ</div>
+                                <div>
+                                    <strong>Carlos Juárez</strong>
+                                    <p>Recomiendan algún hospedaje cerca?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="articulo-blog">
+                        <img src="assets\salinas.jpg" alt="Noticia 2" />
+                        <h2>Nuevos senderos habilitados en las Yungas</h2>
+                        <p
+                            style="
+                                color: var(--color-resalte);
+                                font-weight: bold;
+                                margin-bottom: 1rem;
+                            "
+                        >
+                            Naturaleza | Diciembre 2025
+                        </p>
+                        <p>
+                            Para los fanáticos del trekking, se han inaugurado
+                            nuevos circuitos en el Parque Nacional Calilegua.
+                            Descubrí selva, cascadas y fauna autóctona.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- Sidebar -->
+                <aside>
+                    <div class="articulo-blog" style="padding: 1.5rem">
+                        <h3
+                            style="
+                                margin-bottom: 1rem;
+                                border-bottom: 2px solid var(--color-resalte);
+                                padding-bottom: 0.5rem;
+                            "
+                        >
+                            Categorías
+                        </h3>
+                        <ul>
+                            <li style="margin-bottom: 0.5rem">
+                                <a href="#">&#9656; Cultura</a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem">
+                                <a href="#">&#9656; Naturaleza</a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem">
+                                <a href="#">&#9656; Gastronomía</a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem">
+                                <a href="#">&#9656; Guías de Viaje</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="pie-pagina">
+            <div class="contenedor pie-columnas">
+                <div class="pie-columna">
+                    <h3>Newsletter</h3>
+                    <p>Recibí ofertas únicas para visitar Jujuy.</p>
+                    <form class="form-suscripcion">
+                        <input type="email" placeholder="Tu email" required />
+                        <button type="submit">Suscribir</button>
+                    </form>
+                </div>
+                <div class="pie-columna">
+                    <h3>Seguinos</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="pie-columna">
+                    <h3>Ubicación</h3>
+                    <p>San Salvador de Jujuy, Argentina</p>
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+                        width="100%"
+                        height="150"
+                        style="border: 0"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </div>
+            <div
+                style="
+                    text-align: center;
+                    border-top: 1px solid var(--color-borde);
+                    padding-top: 1rem;
+                "
+            >
+                &copy; 2026 DestinoJujuy - TP1.
+            </div>
+        </footer>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>

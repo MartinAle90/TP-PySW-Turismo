@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Destinos — Turismo en Jujuy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Filtros funcionales */
+      #filtro-todos:checked ~ .grilla-masonry .item-masonry,
+      #filtro-cultural:checked ~ .grilla-masonry .filtro-cultural,
+      #filtro-naturaleza:checked ~ .grilla-masonry .filtro-naturaleza {
+        display: block;
+      }
+
+      #filtro-cultural:checked
+        ~ .grilla-masonry
+        .item-masonry:not(.filtro-cultural),
+      #filtro-naturaleza:checked
+        ~ .grilla-masonry
+        .item-masonry:not(.filtro-naturaleza) {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="encabezado">
+      <div class="contenedor navegacion">
+        <a href="index.html" class="logo">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
+          </svg>
+          DestinoJujuy
+        </a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icono">&#9776;</label>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="agencias.html">Agencias</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <button
+          id="boton-tema"
+          class="boton-oscuro"
+          aria-label="Cambiar modo claro/oscuro"
+        >
+          🌙 / ☀️
+        </button>
+      </div>
+    </header>
+
+    <main class="seccion contenedor">
+      <h1 class="titulo-seccion">Galería de Destinos</h1>
+
+      <!-- Input Radios ocultos para el filtro CSS-Only -->
+      <input
+        type="radio"
+        id="filtro-todos"
+        name="categoria"
+        class="menu-toggle"
+        checked
+      />
+      <input
+        type="radio"
+        id="filtro-cultural"
+        name="categoria"
+        class="menu-toggle"
+      />
+      <input
+        type="radio"
+        id="filtro-naturaleza"
+        name="categoria"
+        class="menu-toggle"
+      />
+
+      <div class="filtros-css">
+        <label for="filtro-todos">Ver Todos</label>
+        <label for="filtro-cultural">Culturales</label>
+        <label for="filtro-naturaleza">Naturaleza</label>
+      </div>
+
+      <div class="grilla-masonry">
+        <div class="item-masonry filtro-cultural">
+          <img src="assets/purmamarca.jpg" alt="Purmamarca" />
+          <div class="overlay-masonry">
+            <h3>Purmamarca</h3>
+            <p>Cerro de los 7 Colores</p>
+          </div>
+        </div>
+
+        <div class="item-masonry filtro-naturaleza">
+          <img src="assets/salinas.jpg" alt="Salinas" />
+          <div class="overlay-masonry">
+            <h3>Salinas Grandes</h3>
+            <p>Inmensidad blanca</p>
+          </div>
+        </div>
+
+        <div class="item-masonry filtro-cultural">
+          <img src="assets/tilcara.jpg" alt="Tilcara" />
+          <div class="overlay-masonry">
+            <h3>Tilcara</h3>
+            <p>Cultura Viva</p>
+          </div>
+        </div>
+
+        <div class="item-masonry filtro-naturaleza">
+          <img src="assets/yungas.jpg" alt="Calilegua" />
+          <div class="overlay-masonry">
+            <h3>Parque Nacional</h3>
+            <p>Selva de las Yungas</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pie-pagina">
+      <div class="contenedor pie-columnas">
+        <div class="pie-columna">
+          <h3>Newsletter</h3>
+          <p>Recibí ofertas únicas para visitar Jujuy.</p>
+          <form class="form-suscripcion">
+            <input type="email" placeholder="Tu email" required />
+            <button type="submit">Suscribir</button>
+          </form>
+        </div>
+        <div class="pie-columna">
+          <h3>Seguinos</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="pie-columna">
+          <h3>Ubicación</h3>
+          <p>San Salvador de Jujuy, Argentina</p>
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+            width="100%"
+            height="150"
+            style="border: 0"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div
+        style="
+          text-align: center;
+          border-top: 1px solid var(--color-borde);
+          padding-top: 1rem;
+        "
+      >
+        &copy; 2026 DestinoJujuy - TP1.
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
