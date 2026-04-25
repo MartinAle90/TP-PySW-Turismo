@@ -51,4 +51,40 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // --- Contador Animado con jQuery y Intersection Observer ---
+    const contadorElement = document.querySelector(".contador-numero");
+
+    if (contadorElement) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // Si el elemento está en la vista y no ha sido animado aún
+                if (entry.isIntersecting && !contadorElement.classList.contains('animado')) {
+                    contadorElement.classList.add('animado'); // Marcar como animado para no repetir
+
+                    const $target = $(entry.target);
+                    const valorFinal = parseInt($target.data("to"));
+
+                    $({ conteo: $target.text() }).animate({ // Empezamos desde el texto actual (0)
+                        conteo: valorFinal
+                    }, {
+                        duration: 2500, // Duración de la animación en milisegundos
+                        easing: 'swing', // Tipo de animación
+                        step: function () {
+                            // Actualizamos el texto en cada paso, redondeando
+                            $target.text(Math.ceil(this.conteo));
+                        },
+                        complete: function () {
+                            // Al final, aseguramos el valor final y agregamos el "+"
+                            $target.text("+" + valorFinal);
+                        }
+                    });
+
+                    // Dejamos de observar para que la animación no se repita
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 }); // La animación se dispara cuando el 50% del elemento es visible
+        observer.observe(contadorElement);
+    }
 });
