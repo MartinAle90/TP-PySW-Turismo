@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -148,35 +149,20 @@
       </form>
 
       <!-- Modal Confirmación -->
-      <div
-        class="modal fade"
-        id="modalExito"
-        tabindex="-1"
-        aria-labelledby="modalExitoLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="modalExitoLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h2 class="modal-title fs-5" id="modalExitoLabel">
                 Mensaje enviado
               </h2>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Cerrar"
-              ></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
               ¡Tu mensaje se envió con éxito! Nos contactaremos a la brevedad.
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="boton boton-secundario"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" class="boton boton-secundario" data-bs-dismiss="modal">
                 Cerrar
               </button>
             </div>
@@ -184,57 +170,33 @@
         </div>
       </div>
 
-      <div
-        class="modal fade"
-        id="modalPhishing"
-        tabindex="-1"
-        aria-labelledby="modalPhishingLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade" id="modalPhishing" tabindex="-1" aria-labelledby="modalPhishingLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h2 class="modal-title fs-5" id="modalPhishingLabel">
                 Reconocer un correo falso
               </h2>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Cerrar"
-              ></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
               <div class="alert alert-warning" role="alert">
-                <strong>Atención:</strong> Los correos falsos suelen usar
-                dominios similares, pedir datos sensibles o crear urgencia.
+                <strong>Atención:</strong> Los correos falsos suelen usar dominios similares, pedir datos sensibles o crear urgencia.
               </div>
               <ul class="phishing-list">
-                <li>
-                  ⚠️ Revisa el remitente y el dominio antes de hacer clic.
-                </li>
+                <li>⚠️ Revisa el remitente y el dominio antes de hacer clic.</li>
                 <li>🔗 Evita enlaces acortados o direcciones extrañas.</li>
-                <li>
-                  🕒 La urgencia y faltas de ortografía son señales de alarma.
-                </li>
+                <li>🕒 La urgencia y faltas de ortografía son señales de alarma.</li>
               </ul>
               <div class="phishing-ejemplo mt-3">
                 <p class="mb-2">Ejemplo a revisar:</p>
                 <div id="phishing-email" class="codigo-falso">
                   soporte@destino-jujuy.com
                 </div>
-                <button
-                  type="button"
-                  id="boton-verificar-phishing"
-                  class="boton boton-secundario mt-3"
-                >
+                <button type="button" id="boton-verificar-phishing" class="boton boton-secundario mt-3">
                   Verificar correo
                 </button>
-                <div
-                  class="mensaje-error mt-3"
-                  id="phishing-feedback"
-                  aria-live="polite"
-                ></div>
+                <div class="mensaje-error mt-3" id="phishing-feedback" aria-live="polite"></div>
               </div>
             </div>
             <div class="modal-footer">
@@ -247,50 +209,36 @@
       </div>
     </main>
 
-    <!-- Footer -->
     <footer class="pie-pagina">
-      <div class="contenedor pie-columnas">
-        <div class="pie-columna">
-          <h3>Newsletter</h3>
-          <p>Recibí ofertas únicas para visitar Jujuy.</p>
-          <form class="form-suscripcion">
-            <input
-              type="email"
-              placeholder="Tu email"
-              role="alert"
-              aria-live="polite"
-              required
-            />
-            <button type="submit">Suscribir</button>
-          </form>
-        </div>
-        <div class="pie-columna">
-          <h3>Seguinos</h3>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-          </ul>
-        </div>
-        <div class="pie-columna">
-          <h3>Ubicación</h3>
-          <p>San Salvador de Jujuy, Argentina</p>
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
-            width="100%"
-            height="150"
-            style="border: 0"
-            loading="lazy"
-          ></iframe>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12">
+            <h3>Newsletter</h3>
+            <p>Recibí ofertas únicas para visitar Jujuy.</p>
+            <form class="form-suscripcion">
+              <input type="email" placeholder="Tu email" role="alert" aria-live="polite" required />
+              <button type="submit">Suscribir</button>
+            </form>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h3>Seguinos</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h3>Ubicación</h3>
+            <p>San Salvador de Jujuy, Argentina</p>
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+              width="100%" height="150" style="border:0; border-radius: 8px;" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
-      <div
-        style="
-          text-align: center;
-          border-top: 1px solid var(--color-borde);
-          padding-top: 1rem;
-        "
-      >
-        &copy; 2026 DestinoJujuy - TP1.
+      <div style="text-align: center; border-top: 1px solid var(--color-borde); padding-top: 1rem; margin-top: 2rem;">
+        &copy; 2026 DestinoJujuy - PySW.
       </div>
     </footer>
 
