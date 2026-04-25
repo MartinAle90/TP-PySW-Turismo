@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Precios — Turismo en Jujuy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="encabezado">
+      <div class="contenedor navegacion">
+        <a href="index.html" class="logo">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
+          </svg>
+          DestinoJujuy
+        </a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icono">&#9776;</label>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+              <a href="destinos.html">Destinos &#9662;</a>
+              <ul class="submenu">
+                <li><a href="destinos.html">Ver Todos</a></li>
+                <li><a href="#">Quebrada</a></li>
+                <li><a href="#">Yungas</a></li>
+              </ul>
+            </li>
+            <li><a href="agencias.html">Agencias</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <button
+          id="boton-tema"
+          class="boton-oscuro"
+          aria-label="Cambiar modo claro/oscuro"
+        >
+          🌙 / ☀️
+        </button>
+      </div>
+    </header>
+
+    <main class="seccion contenedor">
+      <h1 class="titulo-seccion">Nuestros Precios</h1>
+      <p style="text-align: center; margin-bottom: 2rem">
+        Comparador interactivo de destinos y paquetes. Valores orientativos por
+        persona.
+      </p>
+
+      <div class="tabla-contenedor scroll-snap-container">
+        <table class="tabla-precios">
+          <thead>
+            <tr>
+              <th>Destino</th>
+              <th>
+                Escapada (2 Noches)<span
+                  class="tooltip-trigger"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Alojamiento y desayuno"
+                  aria-label="Alojamiento y desayuno"
+                  >?</span
+                >
+              </th>
+              <th>
+                Semana (7 Noches)<span
+                  class="tooltip-trigger"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Media pensión + traslados"
+                  aria-label="Media pensión + traslados"
+                  >?</span
+                >
+              </th>
+              <th>Cat.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Quebrada de Humahuaca</strong></td>
+              <td>$85.000</td>
+              <td>$210.000</td>
+              <td>Cultural</td>
+            </tr>
+            <tr>
+              <td><strong>Purmamarca</strong></td>
+              <td>$82.000</td>
+              <td>$200.000</td>
+              <td>Cultural</td>
+            </tr>
+            <tr>
+              <td><strong>Salinas Grandes</strong></td>
+              <td>$92.000</td>
+              <td>$225.000</td>
+              <td>Naturaleza</td>
+            </tr>
+            <tr>
+              <td><strong>Yungas</strong></td>
+              <td>$75.000</td>
+              <td>$185.000</td>
+              <td>Aventura</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pie-pagina">
+      <div class="contenedor pie-columnas">
+        <div class="pie-columna">
+          <h3>Newsletter</h3>
+          <p>Recibí ofertas únicas para visitar Jujuy.</p>
+          <form class="form-suscripcion">
+            <input type="email" placeholder="Tu email" required />
+            <button type="submit">Suscribir</button>
+          </form>
+        </div>
+        <div class="pie-columna">
+          <h3>Seguinos</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="pie-columna">
+          <h3>Ubicación</h3>
+          <p>San Salvador de Jujuy, Argentina</p>
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+            width="100%"
+            height="150"
+            style="border: 0"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div
+        style="
+          text-align: center;
+          border-top: 1px solid var(--color-borde);
+          padding-top: 1rem;
+        "
+      >
+        &copy; 2026 DestinoJujuy - TP1.
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
