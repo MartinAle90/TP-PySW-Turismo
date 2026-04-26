@@ -1,0 +1,18 @@
+.sprite {
+    background-image: url("../assets/spritesheet.png");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.sprite-reddit {
+    background-position: -10px -10px;
+}
+
+.sprite-facebook {
+    background-position: -44px -10px;
+}
+
+.sprite-whatsapp {
+    background-position: -78px -10px;
+}
