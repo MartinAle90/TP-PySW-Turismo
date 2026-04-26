@@ -8,6 +8,13 @@
     --color-borde: #ccc;
     --color-resalte: #b84d18;
     --color-oro: #c9a227;
+    --color-texto-inverso: #ffffff;
+    --color-control: #f8fafc;
+    --color-control-borde: #cbd5e1;
+    --color-control-texto: #0f172a;
+    --color-punto: #cbd5e1;
+    --color-error: #e74c3c;
+    --color-error-fondo: #fdf2f2;
 
     /* Tipografía y medidas */
     --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -26,6 +33,13 @@
     --color-texto: #f9f6f0;
     --color-blanco: #2a2a2a;
     --color-borde: #444;
+    --color-texto-inverso: #f0f6fc; /* Un blanco ligeramente azulado para el modo oscuro */
+    --color-control: #1f2937;
+    --color-control-borde: #475569;
+    --color-control-texto: #e5e7eb;
+    --color-punto: #64748b;
+    --color-error: #f85149;
+    --color-error-fondo: #2d1a1a;
 }
 
 /* Reset Básico */
@@ -79,7 +93,7 @@ video {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     background-color: var(--color-resalte);
-    color: #fff;
+    color: var(--color-texto-inverso);
     border: none;
     border-radius: var(--radio-borde);
     cursor: pointer;
@@ -121,58 +135,49 @@ video {
     margin-bottom: var(--espaciado-grande);
 }
 
-/* Grilla Destacados */
-.grilla-tarjetas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--espaciado-grande);
+/* Carrusel de testimonios */
+.carrusel-testimonios {
+    /* Se eliminó el fondo, padding y sombra para que el carrusel
+    se integre mejor en el flujo de la página y no parezca un cuadro aparte. */
 }
 
-.tarjeta {
+/* Estilos para la tarjeta de testimonio dentro del carrusel de Bootstrap */
+.tarjetaCarrusel {
+    max-width: 600px; /* Ancho máximo de la tarjeta */
+    margin: 0 auto; /* Centrar la tarjeta dentro del slide */
+    min-height: 150px;
     background-color: var(--color-blanco);
-    border-radius: var(--radio-borde);
-    overflow: hidden;
-    box-shadow: var(--sombra);
-    transition: transform 0.3s;
-}
-
-.tarjeta:hover {
-    transform: translateY(-5px);
-}
-
-.tarjeta img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-}
-
-.tarjeta-cuerpo {
-    padding: var(--espaciado-medio);
-}
-
-.tarjeta-cuerpo h3 {
-    color: var(--color-secundario);
-    margin-bottom: var(--espaciado-chico);
-}
-
-/* Carrusel CSS */
-.carrusel {
-    display: flex;
-    gap: var(--espaciado-medio);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: var(--espaciado-medio);
-}
-
-.carrusel-item {
-    flex: 0 0 300px;
-    scroll-snap-align: center;
-    background-color: var(--color-blanco);
-    padding: var(--espaciado-grande);
     border-radius: var(--radio-borde);
     box-shadow: var(--sombra);
     border-top: 4px solid var(--color-primario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.tarjetaCarrusel p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.autorItem {
+    color: var(--color-primario);
+    align-self: flex-end;
+    font-weight: 700;
+}
+
+/* Personalización de controles e indicadores del carrusel de Bootstrap */
+.carousel-indicators [data-bs-target] {
+    background-color: var(--color-primario);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    display: grid;
 }
 
 /* Página: Destinos */
@@ -199,19 +204,26 @@ video {
     gap: var(--espaciado-medio);
 }
 
+.card,
 .item-masonry {
     break-inside: avoid;
     margin-bottom: var(--espaciado-medio);
     position: relative;
     border-radius: var(--radio-borde);
     overflow: hidden;
+    border: none; /* Para las cards de bootstrap */
 }
 
+.card img,
 .item-masonry img {
     border-radius: var(--radio-borde);
     transition: transform 0.4s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+.card:hover img,
 .item-masonry:hover img {
     transform: scale(1.05);
 }
@@ -221,55 +233,36 @@ video {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     color: #fff;
     padding: var(--espaciado-medio);
     opacity: 0;
     transition: opacity 0.3s;
+    padding-top: 2rem; /* Más espacio para que el gradiente se vea bien */
 }
 
+.card:hover .overlay-masonry,
 .item-masonry:hover .overlay-masonry {
     opacity: 1;
 }
 
 /* --- CONTADOR ANIMADO (Keyframes Avanzados) --- */
 .contador-seccion {
-    background-color: var(--color-secundario);
-    color: var(--color-fondo);
+    background: linear-gradient(
+        45deg,
+        var(--color-primario),
+        var(--color-secundario)
+    );
+    color: var(--color-texto-inverso);
     text-align: center;
     padding: 4rem 2rem;
     margin: 3rem 0;
 }
 
-/* Le enseñamos a CSS que esta variable es un número, no solo texto */
-@property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-}
-
 .contador-numero {
     font-size: 4rem;
     font-weight: bold;
-    color: #d1bfae;
-    /* Animación de 3 segundos que frena al final (forwards) */
-    animation: contar 3s ease-out forwards;
-    /* Usamos el valor de --num como un contador de CSS */
-    counter-reset: visitantes var(--num);
-}
-
-/* Inyectamos el valor del contador y le agregamos un "+" al final */
-.contador-numero::after {
-    content: "+ " counter(visitantes);
-}
-
-@keyframes contar {
-    from {
-        --num: 0;
-    }
-    to {
-        --num: 500;
-    }
+    color: var(--color-oro);
 }
 
 /* Página: Agencias */
@@ -322,7 +315,7 @@ video {
 
 .giratoria-trasera {
     background-color: var(--color-secundario);
-    color: #fff;
+    color: var(--color-texto-inverso);
     transform: rotateY(180deg);
 }
 
@@ -359,7 +352,7 @@ video {
 
 .tabla-precios th {
     background-color: var(--color-primario);
-    color: #fff;
+    color: var(--color-texto-inverso);
 }
 
 .tabla-precios tr:hover {
@@ -387,7 +380,7 @@ video {
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--color-secundario);
-    color: #fff;
+    color: var(--color-texto-inverso);
     padding: 5px 10px;
     border-radius: 4px;
     white-space: nowrap;
@@ -436,7 +429,7 @@ video {
     width: 50px;
     height: 50px;
     background-color: var(--color-resalte);
-    color: #fff;
+    color: var(--color-texto-inverso);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -497,7 +490,7 @@ video {
     height: 20px;
     border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    border-top-color: #fff;
+    border-top-color: var(--color-texto-inverso);
     animation: girar 1s linear infinite;
     margin-left: 10px;
     vertical-align: middle;
@@ -529,8 +522,12 @@ video {
 
 /* Footer */
 .pie-pagina {
-    background-color: var(--color-secundario);
-    color: #fff;
+    background: linear-gradient(
+        to right,
+        var(--color-primario),
+        var(--color-secundario)
+    );
+    color: var(--color-texto-inverso);
     padding: var(--espaciado-grande) 0;
     margin-top: var(--espaciado-grande);
 }
@@ -549,7 +546,7 @@ video {
 .form-suscripcion button {
     padding: 0.5rem;
     background-color: var(--color-resalte);
-    color: #fff;
+    color: var(--color-texto-inverso);
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
@@ -559,8 +556,8 @@ video {
 .grupo-form input:user-invalid,
 .grupo-form select:user-invalid,
 .grupo-form textarea:user-invalid {
-    border-color: #e74c3c;
-    background-color: #fdf2f2;
+    border-color: var(--color-error);
+    background-color: var(--color-error-fondo);
 }
 
 .scroll-snap-container {

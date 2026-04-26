@@ -88,90 +88,112 @@
 
 
         <!-- Destinos destacados -->
-        <section class="seccion contenedor">
+        <section class="seccion container">
             <h2 class="titulo-seccion">Destinos Destacados</h2>
-            <div class="grilla-tarjetas">
-                <article class="tarjeta">
-                    <img src="assets/purmamarca.jpg" alt="Purmamarca" />
-                    <div class="tarjeta-cuerpo">
-                        <h3>Purmamarca</h3>
-                        <p>
-                            El encanto del Cerro de los 7 Colores y su
-                            mercado artesanal.
-                        </p>
-                    </div>
-                </article>
-                <article class="tarjeta">
-                    <img src="assets/salinas.jpg" alt="Salinas Grandes" />
-                    <div class="tarjeta-cuerpo">
-                        <h3>Salinas Grandes</h3>
-                        <p>Un inmenso mar de sal bajo el cielo más puro.</p>
-                    </div>
-                </article>
-                <article class="tarjeta">
-                    <img src="assets/tilcara.jpg" alt="Tilcara" />
-                    <div class="tarjeta-cuerpo">
-                        <h3>Tilcara</h3>
-                        <p>
-                            Cultura, tradición viva y la imponente fortaleza
-                            del Pucará.
-                        </p>
-                    </div>
-                </article>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <article class="card h-100 shadow-sm">
+                        <img src="assets/purmamarca.jpg" alt="Purmamarca">
+                        <div class="overlay-masonry">
+                            <h3>Purmamarca</h3>
+                            <p>El encanto del Cerro de los 7 Colores y su mercado artesanal.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="card h-100 shadow-sm">
+                        <img src="assets/salinas.jpg" alt="Salinas Grandes">
+                        <div class="overlay-masonry">
+                            <h3>Salinas Grandes</h3>
+                            <p>Un inmenso mar de sal bajo el cielo más puro.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="card h-100 shadow-sm">
+                        <img src="assets/tilcara.jpg" alt="Tilcara">
+                        <div class="overlay-masonry">
+                            <h3>Tilcara</h3>
+                            <p>Cultura, tradición viva y la imponente fortaleza del Pucará.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
         <!-- Seccion del contador de visitantes -->
         <section class="contador-seccion">
             <div class="contador-wrapper">
-                <div class="contador-numero"></div>
+                <div class="contador-numero" data-to="500">0</div>
                 <p>Viajeros que vivieron la experiencia</p>
             </div>
         </section>
 
         <!-- Testimonios Carousel -->
-        <section class="seccion contenedor" style="
-                    background-color: var(--color-blanco);
-                    padding: 2rem;
-                    border-radius: var(--radio-borde);
-                ">
+        <section class="seccion contenedor carrusel-testimonios">
             <h2 class="titulo-seccion">Lo que dicen nuestros visitantes</h2>
-            <div class="carrusel">
-                <article class="carrusel-item">
-                    <p>
-                        "La inmensidad de las Salinas Grandes te deja sin
-                        palabras."
-                    </p>
-                    <strong>- Sofía M.</strong>
-                </article>
-                <article class="carrusel-item">
-                    <p>
-                        "Excelente organización y los paisajes de Purmamarca
-                        son un sueño."
-                    </p>
-                    <strong>- Leandro G.</strong>
-                </article>
-                <article class="carrusel-item">
-                    <p>
-                        "Conocer el Pucará en Tilcara fue un viaje en el
-                        tiempo. Sumamente recomendado."
-                    </p>
-                    <strong>- Camila R.</strong>
-                </article>
-                <article class="carrusel-item">
-                    <p>
-                        "Los colores de Purmamarca son increibles, me
-                        encantó."
-                    </p>
-                    <strong>- Maria L.</strong>
-                </article>
-                <article class="carrusel-item">
-                    <p>
-                        "Me encantó el viaje a las Salinas Grandes, fue una
-                        experiencia única."
-                    </p>
-                    <strong>- Juan P.</strong>
-                </article>
+
+            <!-- Carrusel de Bootstrap -->
+            <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores (puntos) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Testimonio 1"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="1"
+                        aria-label="Testimonio 2"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="2"
+                        aria-label="Testimonio 3"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="3"
+                        aria-label="Testimonio 4"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="4"
+                        aria-label="Testimonio 5"></button>
+                </div>
+
+                <!-- Contenido de los slides -->
+                <div class="carousel-inner py-5">
+                    <div class="carousel-item active">
+                        <div class="tarjetaCarrusel">
+                            <p>"La inmensidad de las Salinas Grandes te deja sin palabras."</p>
+                            <strong class="autorItem">- Sofía M.</strong>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="tarjetaCarrusel">
+                            <p>"Excelente organización y los paisajes de Purmamarca son un sueño."</p>
+                            <strong class="autorItem">- Leandro G.</strong>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="tarjetaCarrusel">
+                            <p>"Conocer el Pucará en Tilcara fue un viaje en el tiempo. Sumamente recomendado."</p>
+                            <strong class="autorItem">- Camila R.</strong>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="tarjetaCarrusel">
+                            <p>"Los colores de Purmamarca son increíbles, me encantó."</p>
+                            <strong class="autorItem">- Maria L.</strong>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="tarjetaCarrusel">
+                            <p>"Me encantó el viaje a las Salinas Grandes, fue una experiencia única."</p>
+                            <strong class="autorItem">- Juan P.</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles (flechas) -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
         </section>
     </main>
