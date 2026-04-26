@@ -15,7 +15,7 @@
     --color-punto: #cbd5e1;
     --color-error: #e74c3c;
     --color-error-fondo: #fdf2f2;
- 
+
     /* Tipografía y medidas */
     --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     --espaciado-chico: 0.5rem;
@@ -40,7 +40,7 @@
     --color-punto: #64748b;
     --color-error: #f85149;
     --color-error-fondo: #2d1a1a;
- }
+}
 
 /* Reset Básico */
 *,
@@ -108,128 +108,8 @@ video {
     transform: translateY(-2px);
 }
 
-/* Navegación / Header */
-.encabezado {
-    background-color: var(--color-blanco);
-    box-shadow: var(--sombra);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: var(--espaciado-medio) 0;
-}
-
-.navegacion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-primario);
-    display: flex;
-    align-items: center;
-    gap: var(--espaciado-chico);
-}
-
-.menu {
-    display: flex;
-    gap: var(--espaciado-grande);
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu a {
-    font-weight: 600;
-    color: var(--color-texto);
-}
-
-.menu a:hover {
-    color: var(--color-resalte);
-}
-
-/* Mega-menú nativo */
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--color-blanco);
-    box-shadow: var(--sombra);
-    padding: var(--espaciado-medio);
-    border-radius: var(--radio-borde);
-    min-width: 200px;
-    z-index: 10;
-}
-
-.menu li:hover .submenu {
-    display: block;
-}
-
-.submenu li {
-    margin-bottom: var(--espaciado-chico);
-}
-
-.boton-oscuro {
-    background: none;
-    border: 1px solid var(--color-borde);
-    padding: 0.5rem;
-    border-radius: var(--radio-borde);
-    cursor: pointer;
-    color: var(--color-texto);
-}
-
-/* Mostrar menú móvil */
-.menu-toggle {
-    display: none;
-}
-
-.menu-icono {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Página: Inicio (Home) */
-.seccion-hero {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--color-texto-inverso);
-    overflow: hidden;
-}
-
-.video-fondo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-
-.fondo-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    background: var(--color-overlay);
-    z-index: -1;
-}
-
-.hero-contenido h1 {
-    font-size: 3rem;
-    margin-bottom: var(--espaciado-chico);
-    animation: fadeIn 1.5s ease;
+.hero {
+    min-height: 60vh;
 }
 
 @keyframes fadeIn {
@@ -368,7 +248,11 @@ video {
 
 /* --- CONTADOR ANIMADO (Keyframes Avanzados) --- */
 .contador-seccion {
-    background: linear-gradient(45deg, var(--color-primario), var(--color-secundario));
+    background: linear-gradient(
+        45deg,
+        var(--color-primario),
+        var(--color-secundario)
+    );
     color: var(--color-texto-inverso);
     text-align: center;
     padding: 4rem 2rem;
@@ -638,16 +522,14 @@ video {
 
 /* Footer */
 .pie-pagina {
-    background: linear-gradient(to right, var(--color-primario), var(--color-secundario));
+    background: linear-gradient(
+        to right,
+        var(--color-primario),
+        var(--color-secundario)
+    );
     color: var(--color-texto-inverso);
     padding: var(--espaciado-grande) 0;
     margin-top: var(--espaciado-grande);
-}
-
-.pie-pagina h3 {
-    border-bottom: 2px solid var(--color-resalte);
-    padding-bottom: 5px;
-    margin-bottom: var(--espaciado-medio);
 }
 
 .form-suscripcion {
@@ -668,48 +550,6 @@ video {
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
-}
-
-/* Responsividad Básica */
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: var(--color-blanco);
-        padding: var(--espaciado-medio);
-        box-shadow: var(--sombra);
-    }
-
-    .menu-icono {
-        display: block;
-    }
-
-    .menu-toggle:checked ~ nav .menu {
-        display: flex;
-    }
-
-    .submenu {
-        position: static;
-        box-shadow: none;
-        padding-left: var(--espaciado-grande);
-    }
-
-    .seccion-blog {
-        grid-template-columns: 1fr;
-    }
-
-    .slide {
-        padding: 0 2.8rem;
-    }
-
-    .tarjetaCarrusel {
-        min-height: 165px;
-        padding: 1.2rem;
-    }
 }
 
 /* Mostrar error una vez que el usuario ya interactuó con el campo */
