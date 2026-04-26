@@ -14,39 +14,54 @@
 </head>
 
 <body>
-    <header class="encabezado">
-        <div class="contenedor navegacion">
-            <a href="index.html" class="logo">
-                <!-- SVG Icono montaña simple -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-secondary shadow sticky-top">
+        <div class="container-fluid">
+            <!-- Logo con SVG -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="me-2">
                     <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
                 </svg>
                 DestinoJujuy
             </a>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-            <label for="menu-toggle" class="menu-icono">&#9776;</label>
-            <nav>
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li>
-                        <a href="destinos.html">Destinos &#9662;</a>
-                        <ul class="submenu">
-                            <li><a href="destinos.html">Ver Todos</a></li>
-                            <li><a href="#">Quebrada</a></li>
-                            <li><a href="#">Yungas</a></li>
+
+            <!-- Botón hamburguesa Bootstrap -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Contenido colapsable -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="destinos.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Destinos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="destinos.html">Ver Todos</a></li>
+                            <li><a class="dropdown-item" href="#">Quebrada</a></li>
+                            <li><a class="dropdown-item" href="#">Yungas</a></li>
                         </ul>
                     </li>
-                    <li><a href="agencias.html">Agencias</a></li>
-                    <li><a href="precios.html">Precios</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
-            </nav>
-            <button id="boton-tema" class="boton-oscuro" aria-label="Cambiar modo claro/oscuro">
-                🌙 / ☀️
-            </button>
+
+                <!-- Botón tema claro/oscuro -->
+                <button id="boton-tema" class="btn btn-outline-secondary ms-lg-3"
+                    aria-label="Cambiar modo claro/oscuro">
+                    <i class="bi bi-moon-fill"></i> / <i class="bi bi-sun-fill"></i>
+                </button>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <main>
         <!-- Sección Hero -->
