@@ -22,7 +22,7 @@
                     class="me-2">
                     <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
                 </svg>
-                DestinoJujuy
+                <span class="fw-bold">DestinoJujuy</span>
             </a>
 
             <!-- Botón hamburguesa Bootstrap -->
@@ -57,7 +57,7 @@
                 <!-- Botón tema claro/oscuro -->
                 <button id="boton-tema" class="btn btn-outline-secondary ms-lg-3"
                     aria-label="Cambiar modo claro/oscuro">
-                    <i class="bi bi-moon-fill"></i> / <i class="bi bi-sun-fill"></i>
+                    <i class="bi bi-moon-stars-fill"></i> / <i class="bi bi-sun-fill"></i>
                 </button>
             </div>
         </div>
@@ -65,19 +65,27 @@
 
     <main>
         <!-- Sección Hero -->
-        <section class="seccion-hero">
-            <!-- video fallback hasta conseguir el asset -->
-            <video autoplay loop muted playsinline class="video-fondo">
+        <section class="hero position-relative overflow-hidden d-flex align-items-center">
+
+            <video autoplay loop muted playsinline
+                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-0">
                 <source src="assets/jujuy-video.mp4" type="video/mp4" />
-                Tu navegador no soporta videos.
             </video>
-            <div class="fondo-overlay"></div>
-            <div class="hero-contenido">
-                <h1>Descubrí la magia de Jujuy</h1>
-                <p>Naturaleza, cultura y tradición te están esperando.</p>
-                <a href="destinos.html" class="boton" style="margin-top: 1rem">Explorar destinos</a>
+
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 z-1"></div>
+
+            <div class="container position-relative z-2">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 text-center text-white">
+                        <h1 class="display-4 fw-bold mb-3">Descubrí la magia de Jujuy</h1>
+                        <p class="lead mb-4">Naturaleza, cultura y tradición te están esperando.</p>
+                        <a href="destinos.html" class="btn btn-danger btn-lg">Explorar destinos</a>
+                    </div>
+                </div>
             </div>
+
         </section>
+
 
         <!-- Destinos destacados -->
         <section class="seccion contenedor">
