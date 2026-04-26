@@ -135,12 +135,6 @@ video {
     margin-bottom: var(--espaciado-grande);
 }
 
-/* Carrusel de testimonios */
-.carrusel-testimonios {
-    /* Se eliminó el fondo, padding y sombra para que el carrusel
-    se integre mejor en el flujo de la página y no parezca un cuadro aparte. */
-}
-
 /* Estilos para la tarjeta de testimonio dentro del carrusel de Bootstrap */
 .tarjetaCarrusel {
     max-width: 600px; /* Ancho máximo de la tarjeta */
@@ -166,6 +160,17 @@ video {
     color: var(--color-primario);
     align-self: flex-end;
     font-weight: 700;
+}
+
+/* Retenemos estrictamente lo vinculado a tus variables de Modo Oscuro/Temáticas */
+.tarjeta-testimonio {
+    min-height: 150px;
+    background-color: var(--color-blanco);
+    border-top: 4px solid var(--color-primario);
+}
+
+.tarjeta-testimonio strong {
+    color: var(--color-primario);
 }
 
 /* Personalización de controles e indicadores del carrusel de Bootstrap */
