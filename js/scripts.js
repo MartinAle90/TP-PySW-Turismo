@@ -88,15 +88,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const temaGuardado = localStorage.getItem("tema");
     if (temaGuardado === "oscuro") {
       document.documentElement.setAttribute("data-tema", "oscuro");
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-bs-theme", "light");
     }
 
     botonTema.addEventListener("click", () => {
       const temaActual = document.documentElement.getAttribute("data-tema");
       if (temaActual === "oscuro") {
         document.documentElement.removeAttribute("data-tema");
+        document.documentElement.setAttribute("data-bs-theme", "light");
         localStorage.setItem("tema", "claro");
       } else {
         document.documentElement.setAttribute("data-tema", "oscuro");
+        document.documentElement.setAttribute("data-bs-theme", "dark");
         localStorage.setItem("tema", "oscuro");
       }
     });
