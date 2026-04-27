@@ -107,67 +107,93 @@
       </div>
     </nav>
 
-    <main class="seccion contenedor">
-      <h1 class="titulo-seccion">Galería de Destinos</h1>
+    <main class="py-5 container">
+        <h1 class="titulo-seccion">Galería de Destinos</h1>
 
-      <!-- Input Radios ocultos para el filtro CSS-Only -->
-      <input
-        type="radio"
-        id="filtro-todos"
-        name="categoria"
-        class="menu-toggle"
-        checked
-      />
-      <input
-        type="radio"
-        id="filtro-cultural"
-        name="categoria"
-        class="menu-toggle"
-      />
-      <input
-        type="radio"
-        id="filtro-naturaleza"
-        name="categoria"
-        class="menu-toggle"
-      />
-
-      <div class="filtros-css">
-        <label for="filtro-todos">Ver Todos</label>
-        <label for="filtro-cultural">Culturales</label>
-        <label for="filtro-naturaleza">Naturaleza</label>
-      </div>
-
-      <div class="grilla-masonry">
-        <div class="item-masonry filtro-cultural">
-          <img src="assets/purmamarca.jpg" alt="Purmamarca" />
-          <div class="overlay-masonry">
-            <h3>Purmamarca</h3>
-            <p>Cerro de los 7 Colores</p>
-          </div>
+        <!-- Filtros jQuery -->
+        <div class="filtros-jquery text-center mb-5 d-flex justify-content-center gap-3 flex-wrap">
+            <button class="btn btn-outline-secondary btn-filtro active" data-filter="all">Ver Todos</button>
+            <button class="btn btn-outline-secondary btn-filtro" data-filter="cultural">Culturales</button>
+            <button class="btn btn-outline-secondary btn-filtro" data-filter="naturaleza">Naturaleza</button>
         </div>
 
-        <div class="item-masonry filtro-naturaleza">
-          <img src="assets/salinas.jpg" alt="Salinas" />
-          <div class="overlay-masonry">
-            <h3>Salinas Grandes</h3>
-            <p>Inmensidad blanca</p>
-          </div>
-        </div>
+        <div class="row g-4 grilla-destinos">
+            <div class="col-12 col-md-6 col-lg-4 item-destino" data-category="cultural">
+                <article class="card h-100 shadow-sm border-0 zoom-card">
+                    <img src="assets/purmamarca.jpg" alt="Purmamarca" />
+                    <div class="overlay-masonry">
+                        <h3>Purmamarca</h3>
+                        <p>Cerro de los 7 Colores</p>
+                    </div>
+                </article>
+            </div>
 
-        <div class="item-masonry filtro-cultural">
-          <img src="assets/tilcara.jpg" alt="Tilcara" />
-          <div class="overlay-masonry">
-            <h3>Tilcara</h3>
-            <p>Cultura Viva</p>
-          </div>
-        </div>
+            <div class="col-12 col-md-6 col-lg-4 item-destino" data-category="naturaleza">
+                <article class="card h-100 shadow-sm border-0 zoom-card">
+                    <img src="assets/salinas.jpg" alt="Salinas" />
+                    <div class="overlay-masonry">
+                        <h3>Salinas Grandes</h3>
+                        <p>Inmensidad blanca</p>
+                    </div>
+                </article>
+            </div>
 
-        <div class="item-masonry filtro-naturaleza">
-          <img src="assets/yungas.jpg" alt="Calilegua" />
-          <div class="overlay-masonry">
-            <h3>Parque Nacional</h3>
-            <p>Selva de las Yungas</p>
-          </div>
+            <div class="col-12 col-md-6 col-lg-4 item-destino" data-category="cultural">
+                <article class="card h-100 shadow-sm border-0 zoom-card">
+                    <img src="assets/tilcara.jpg" alt="Tilcara" />
+                    <div class="overlay-masonry">
+                        <h3>Tilcara</h3>
+                        <p>Cultura Viva</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 item-destino" data-category="naturaleza">
+                <article class="card h-100 shadow-sm border-0 zoom-card">
+                    <img src="assets/yungas.jpg" alt="Calilegua" />
+                    <div class="overlay-masonry">
+                        <h3>Parque Nacional</h3>
+                        <p>Selva de las Yungas</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+        <div class="mt-5 pt-4">
+            <h2 class="titulo-seccion">Tarifario Básico</h2>
+            <div class="table-responsive bg-white rounded shadow-sm p-3">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Destino</th>
+                            <th>Alojamiento (Noche)</th>
+                            <th>Excursión</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Purmamarca</td>
+                            <td>$40.000</td>
+                            <td>$15.000</td>
+                        </tr>
+                        <tr>
+                            <td>Salinas Grandes</td>
+                            <td>-</td>
+                            <td>$25.000</td>
+                        </tr>
+                        <tr>
+                            <td>Tilcara</td>
+                            <td>$35.000</td>
+                            <td>$12.000</td>
+                        </tr>
+                        <tr>
+                            <td>Yungas</td>
+                            <td>$30.000</td>
+                            <td>$20.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
       </div>
     </main>
@@ -175,75 +201,72 @@
     <!-- Footer -->
     <footer class="pie-pagina">
       <div class="container px-4 px-sm-0">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">
-              Newsletter
-            </h3>
-            <p>Recibí ofertas únicas para visitar Jujuy.</p>
-            <form
-              id="formulario-newsletter"
-              class="form-suscripcion"
-              novalidate
-            >
-              <div class="mb-3">
-                <input
-                  type="email"
-                  id="newsletter-email"
-                  name="newsletter-email"
-                  class="form-control"
-                  placeholder="Tu email"
-                  required
-                />
-                <div
-                  class="mensaje-error"
-                  id="newsletter-error"
-                  aria-live="polite"
-                ></div>
-              </div>
-              <div class="mb-3">
-                <button type="submit" class="btn btn-danger w-100">
-                  Suscribir
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">
-              Nuestras Redes
-            </h3>
-            <a href="https://reddit.com" class="d-flex pt-2">
-              <span class="sprite sprite-reddit me-2"></span>
-              Reddit
-            </a>
-            <a href="https://facebook.com" class="d-flex pt-2">
-              <span class="sprite sprite-facebook me-2"></span>
-              Facebook
-            </a>
-            <a href="https://whatsapp.com" class="d-flex pt-2">
-              <span class="sprite sprite-whatsapp me-2"></span>
-              Whatsapp
-            </a>
-          </div>
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
-            <div class="mb-2">
-              <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy,
-              Argentina
-            </div>
-            <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
-              width="100%"
-              height="150"
-              style="border: 0"
-              loading="lazy"
-            ></iframe>
-          </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <!-- Newsletter -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Newsletter</h3>
+      <p>Recibí ofertas únicas para visitar Jujuy.</p>
+      <form
+        id="formulario-newsletter"
+        class="form-suscripcion"
+        novalidate
+      >
+        <div class="mb-3">
+          <input
+            type="email"
+            id="newsletter-email"
+            name="newsletter-email"
+            class="form-control"
+            placeholder="Tu email"
+            required
+          />
+          <div
+            class="mensaje-error"
+            id="newsletter-error"
+            aria-live="polite"
+          ></div>
         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-danger w-100">
+            Suscribir
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Nuestras Redes</h3>
+      <a href="https://reddit.com" class="d-flex pt-2">
+        <span class="sprite sprite-reddit me-2"></span>
+        Reddit
+      </a>
+      <a href="https://facebook.com" class="d-flex pt-2">
+        <span class="sprite sprite-facebook me-2"></span>
+        Facebook
+      </a>
+      <a href="https://whatsapp.com" class="d-flex pt-2">
+        <span class="sprite sprite-whatsapp me-2"></span>
+        Whatsapp
+      </a>
+    </div>
+
+    <!-- Ubicación -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
+      <div class="mb-2">
+        <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy, Argentina
       </div>
-      <div class="text-center border-top pt-3 mt-3">
-        &copy; 2026 - DestinoJujuy.
-      </div>
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+        width="100%"
+        height="150"
+        style="border: 0"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</div>
     </footer>
 
     <!-- Scripts -->

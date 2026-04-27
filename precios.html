@@ -107,143 +107,130 @@
       </div>
     </nav>
 
-    <main class="seccion contenedor">
-      <h1 class="titulo-seccion">Nuestros Precios</h1>
-      <p style="text-align: center; margin-bottom: 2rem">
-        Comparador interactivo de destinos y paquetes. Valores orientativos por
-        persona.
-      </p>
+    <main class="py-5 container">
+        <h1 class="titulo-seccion">Nuestros Precios</h1>
+        <p class="text-center mb-5">
+            Comparador interactivo de destinos y paquetes. Valores orientativos por
+            persona.
+        </p>
 
-      <div class="tabla-contenedor scroll-snap-container">
-        <table class="tabla-precios">
-          <thead>
-            <tr>
-              <th>Destino</th>
-              <th>
-                Escapada (2 Noches)<span
-                  class="tooltip-trigger"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="Alojamiento y desayuno"
-                  aria-label="Alojamiento y desayuno"
-                  >?</span
-                >
-              </th>
-              <th>
-                Semana (7 Noches)<span
-                  class="tooltip-trigger"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="Media pensión + traslados"
-                  aria-label="Media pensión + traslados"
-                  >?</span
-                >
-              </th>
-              <th>Cat.</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Quebrada de Humahuaca</strong></td>
-              <td>$85.000</td>
-              <td>$210.000</td>
-              <td>Cultural</td>
-            </tr>
-            <tr>
-              <td><strong>Purmamarca</strong></td>
-              <td>$82.000</td>
-              <td>$200.000</td>
-              <td>Cultural</td>
-            </tr>
-            <tr>
-              <td><strong>Salinas Grandes</strong></td>
-              <td>$92.000</td>
-              <td>$225.000</td>
-              <td>Naturaleza</td>
-            </tr>
-            <tr>
-              <td><strong>Yungas</strong></td>
-              <td>$75.000</td>
-              <td>$185.000</td>
-              <td>Aventura</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div class="tabla-contenedor scroll-snap-container">
+            <table class="tabla-precios">
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>
+                            Escapada (2 Noches)<span class="badge rounded-pill text-bg-secondary ms-1" style="cursor: help;" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="Alojamiento y desayuno"
+                                aria-label="Alojamiento y desayuno">?</span>
+                        </th>
+                        <th>
+                            Semana (7 Noches)<span class="badge rounded-pill text-bg-secondary ms-1" style="cursor: help;" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="Media pensión + traslados"
+                                aria-label="Media pensión + traslados">?</span>
+                        </th>
+                        <th>Cat.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Quebrada de Humahuaca</strong></td>
+                        <td>$85.000</td>
+                        <td>$210.000</td>
+                        <td>Cultural</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Purmamarca</strong></td>
+                        <td>$82.000</td>
+                        <td>$200.000</td>
+                        <td>Cultural</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Salinas Grandes</strong></td>
+                        <td>$92.000</td>
+                        <td>$225.000</td>
+                        <td>Naturaleza</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Yungas</strong></td>
+                        <td>$75.000</td>
+                        <td>$185.000</td>
+                        <td>Aventura</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer class="pie-pagina">
       <div class="container px-4 px-sm-0">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">
-              Newsletter
-            </h3>
-            <p>Recibí ofertas únicas para visitar Jujuy.</p>
-            <form
-              id="formulario-newsletter"
-              class="form-suscripcion"
-              novalidate
-            >
-              <div class="mb-3">
-                <input
-                  type="email"
-                  id="newsletter-email"
-                  name="newsletter-email"
-                  class="form-control"
-                  placeholder="Tu email"
-                  required
-                />
-                <div
-                  class="mensaje-error"
-                  id="newsletter-error"
-                  aria-live="polite"
-                ></div>
-              </div>
-              <div class="mb-3">
-                <button type="submit" class="btn btn-danger w-100">
-                  Suscribir
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">
-              Nuestras Redes
-            </h3>
-            <a href="https://reddit.com" class="d-flex pt-2">
-              <span class="sprite sprite-reddit me-2"></span>
-              Reddit
-            </a>
-            <a href="https://facebook.com" class="d-flex pt-2">
-              <span class="sprite sprite-facebook me-2"></span>
-              Facebook
-            </a>
-            <a href="https://whatsapp.com" class="d-flex pt-2">
-              <span class="sprite sprite-whatsapp me-2"></span>
-              Whatsapp
-            </a>
-          </div>
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
-            <div class="mb-2">
-              <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy,
-              Argentina
-            </div>
-            <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
-              width="100%"
-              height="150"
-              style="border: 0"
-              loading="lazy"
-            ></iframe>
-          </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <!-- Newsletter -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Newsletter</h3>
+      <p>Recibí ofertas únicas para visitar Jujuy.</p>
+      <form
+        id="formulario-newsletter"
+        class="form-suscripcion"
+        novalidate
+      >
+        <div class="mb-3">
+          <input
+            type="email"
+            id="newsletter-email"
+            name="newsletter-email"
+            class="form-control"
+            placeholder="Tu email"
+            required
+          />
+          <div
+            class="mensaje-error"
+            id="newsletter-error"
+            aria-live="polite"
+          ></div>
         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-danger w-100">
+            Suscribir
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Nuestras Redes</h3>
+      <a href="https://reddit.com" class="d-flex pt-2">
+        <span class="sprite sprite-reddit me-2"></span>
+        Reddit
+      </a>
+      <a href="https://facebook.com" class="d-flex pt-2">
+        <span class="sprite sprite-facebook me-2"></span>
+        Facebook
+      </a>
+      <a href="https://whatsapp.com" class="d-flex pt-2">
+        <span class="sprite sprite-whatsapp me-2"></span>
+        Whatsapp
+      </a>
+    </div>
+
+    <!-- Ubicación -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
+      <div class="mb-2">
+        <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy, Argentina
       </div>
-      <div class="text-center border-top pt-3 mt-3">
-        &copy; 2026 - DestinoJujuy.
-      </div>
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+        width="100%"
+        height="150"
+        style="border: 0"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</div>
     </footer>
 
     <!-- Scripts -->

@@ -126,16 +126,37 @@
           class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 z-1"
         ></div>
 
-        <div class="container position-relative z-2">
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-8 text-center text-white">
-              <h1 class="display-4 fw-bold mb-3">Descubrí la magia de Jujuy</h1>
-              <p class="lead mb-4">
-                Naturaleza, cultura y tradición te están esperando.
-              </p>
-              <a href="destinos.html" class="btn btn-danger btn-lg"
-                >Explorar destinos</a
-              >
+        <!-- Destinos destacados -->
+        <section class="py-5 container">
+            <h2 class="titulo-seccion">Destinos Destacados</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <article class="card h-100 shadow-sm">
+                        <img src="assets/purmamarca.jpg" alt="Purmamarca">
+                        <div class="overlay-masonry">
+                            <h3>Purmamarca</h3>
+                            <p>El encanto del Cerro de los 7 Colores y su mercado artesanal.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="card h-100 shadow-sm">
+                        <img src="assets/salinas.jpg" alt="Salinas Grandes">
+                        <div class="overlay-masonry">
+                            <h3>Salinas Grandes</h3>
+                            <p>Un inmenso mar de sal bajo el cielo más puro.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="card h-100 shadow-sm">
+                        <img src="assets/tilcara.jpg" alt="Tilcara">
+                        <div class="overlay-masonry">
+                            <h3>Tilcara</h3>
+                            <p>Cultura, tradición viva y la imponente fortaleza del Pucará.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
           </div>
         </div>
@@ -179,93 +200,90 @@
         </div>
       </section>
 
-      <!-- Seccion del contador de visitantes -->
-      <section class="contador-seccion">
-        <div class="contador-wrapper">
-          <div class="contador-numero" data-to="500">0</div>
-          <p>Viajeros que vivieron la experiencia</p>
-        </div>
-      </section>
+        <!-- Testimonios Carousel -->
+        <section class="container py-5">
+            <h2 class="text-center mb-5 text-primario">Lo que dicen nuestros visitantes</h2>
 
-      <!-- Testimonios Carousel -->
-      <section class="seccion contenedor carrusel-testimonios">
-        <h2 class="titulo-seccion">Lo que dicen nuestros visitantes</h2>
+            <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
 
-        <!-- Carrusel de Bootstrap -->
-        <div
-          id="carouselTestimonios"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <!-- Indicadores (puntos) -->
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselTestimonios"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Testimonio 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselTestimonios"
-              data-bs-slide-to="1"
-              aria-label="Testimonio 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselTestimonios"
-              data-bs-slide-to="2"
-              aria-label="Testimonio 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselTestimonios"
-              data-bs-slide-to="3"
-              aria-label="Testimonio 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselTestimonios"
-              data-bs-slide-to="4"
-              aria-label="Testimonio 5"
-            ></button>
-          </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Testimonio 1"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="1"
+                        aria-label="Testimonio 2"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="2"
+                        aria-label="Testimonio 3"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="3"
+                        aria-label="Testimonio 4"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="4"
+                        aria-label="Testimonio 5"></button>
+                </div>
 
-          <!-- Contenido de los slides -->
-          <div class="carousel-inner py-5">
-            <div class="carousel-item active">
-              <div class="tarjetaCarrusel">
-                <p>
-                  "La inmensidad de las Salinas Grandes te deja sin palabras."
-                </p>
-                <strong class="autorItem">- Sofía M.</strong>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="tarjetaCarrusel">
-                <p>
-                  "Excelente organización y los paisajes de Purmamarca son un
-                  sueño."
-                </p>
-                <strong class="autorItem">- Leandro G.</strong>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="tarjetaCarrusel">
-                <p>
-                  "Conocer el Pucará en Tilcara fue un viaje en el tiempo.
-                  Sumamente recomendado."
-                </p>
-                <strong class="autorItem">- Camila R.</strong>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="tarjetaCarrusel">
-                <p>"Los colores de Purmamarca son increíbles, me encantó."</p>
-                <strong class="autorItem">- Maria L.</strong>
-              </div>
+                <div class="carousel-inner py-4">
+                    <div class="carousel-item active">
+                        <div class="col-11 col-md-8 col-lg-6 mx-auto">
+                            <div
+                                class="tarjeta-testimonio p-4 shadow rounded d-flex flex-column justify-content-center text-center gap-3">
+                                <p class="fs-5 mb-0">"La inmensidad de las Salinas Grandes te deja sin palabras."</p>
+                                <strong class="align-self-end fw-bold">- Sofía M.</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="col-11 col-md-8 col-lg-6 mx-auto">
+                            <div
+                                class="tarjeta-testimonio p-4 shadow rounded d-flex flex-column justify-content-center text-center gap-3">
+                                <p class="fs-5 mb-0">"Excelente organización y los paisajes de Purmamarca son un sueño."
+                                </p>
+                                <strong class="align-self-end fw-bold">- Leandro G.</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="col-11 col-md-8 col-lg-6 mx-auto">
+                            <div
+                                class="tarjeta-testimonio p-4 shadow rounded d-flex flex-column justify-content-center text-center gap-3">
+                                <p class="fs-5 mb-0">"Conocer el Pucará en Tilcara fue un viaje en el tiempo. Sumamente
+                                    recomendado."</p>
+                                <strong class="align-self-end fw-bold">- Camila R.</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="col-11 col-md-8 col-lg-6 mx-auto">
+                            <div
+                                class="tarjeta-testimonio p-4 shadow rounded d-flex flex-column justify-content-center text-center gap-3">
+                                <p class="fs-5 mb-0">"Los colores de Purmamarca son increíbles, me encantó."</p>
+                                <strong class="align-self-end fw-bold">- Maria L.</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="col-11 col-md-8 col-lg-6 mx-auto">
+                            <div
+                                class="tarjeta-testimonio p-4 shadow rounded d-flex flex-column justify-content-center text-center gap-3">
+                                <p class="fs-5 mb-0">"Me encantó el viaje a las Salinas Grandes, fue una experiencia
+                                    única."</p>
+                                <strong class="align-self-end fw-bold">- Juan P.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
             <div class="carousel-item">
               <div class="tarjetaCarrusel">
@@ -304,75 +322,72 @@
     <!-- Footer -->
     <footer class="pie-pagina">
       <div class="container px-4 px-sm-0">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">
-              Newsletter
-            </h3>
-            <p>Recibí ofertas únicas para visitar Jujuy.</p>
-            <form
-              id="formulario-newsletter"
-              class="form-suscripcion"
-              novalidate
-            >
-              <div class="mb-3">
-                <input
-                  type="email"
-                  id="newsletter-email"
-                  name="newsletter-email"
-                  class="form-control"
-                  placeholder="Tu email"
-                  required
-                />
-                <div
-                  class="mensaje-error"
-                  id="newsletter-error"
-                  aria-live="polite"
-                ></div>
-              </div>
-              <div class="mb-3">
-                <button type="submit" class="btn btn-danger w-100">
-                  Suscribir
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">
-              Nuestras Redes
-            </h3>
-            <a href="https://reddit.com" class="d-flex pt-2">
-              <span class="sprite sprite-reddit me-2"></span>
-              Reddit
-            </a>
-            <a href="https://facebook.com" class="d-flex pt-2">
-              <span class="sprite sprite-facebook me-2"></span>
-              Facebook
-            </a>
-            <a href="https://whatsapp.com" class="d-flex pt-2">
-              <span class="sprite sprite-whatsapp me-2"></span>
-              Whatsapp
-            </a>
-          </div>
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
-            <div class="mb-2">
-              <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy,
-              Argentina
-            </div>
-            <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
-              width="100%"
-              height="150"
-              style="border: 0"
-              loading="lazy"
-            ></iframe>
-          </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <!-- Newsletter -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Newsletter</h3>
+      <p>Recibí ofertas únicas para visitar Jujuy.</p>
+      <form
+        id="formulario-newsletter"
+        class="form-suscripcion"
+        novalidate
+      >
+        <div class="mb-3">
+          <input
+            type="email"
+            id="newsletter-email"
+            name="newsletter-email"
+            class="form-control"
+            placeholder="Tu email"
+            required
+          />
+          <div
+            class="mensaje-error"
+            id="newsletter-error"
+            aria-live="polite"
+          ></div>
         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-danger w-100">
+            Suscribir
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Nuestras Redes</h3>
+      <a href="https://reddit.com" class="d-flex pt-2">
+        <span class="sprite sprite-reddit me-2"></span>
+        Reddit
+      </a>
+      <a href="https://facebook.com" class="d-flex pt-2">
+        <span class="sprite sprite-facebook me-2"></span>
+        Facebook
+      </a>
+      <a href="https://whatsapp.com" class="d-flex pt-2">
+        <span class="sprite sprite-whatsapp me-2"></span>
+        Whatsapp
+      </a>
+    </div>
+
+    <!-- Ubicación -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
+      <div class="mb-2">
+        <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy, Argentina
       </div>
-      <div class="text-center border-top pt-3 mt-3">
-        &copy; 2026 - DestinoJujuy.
-      </div>
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+        width="100%"
+        height="150"
+        style="border: 0"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</div>
     </footer>
 
     <!-- Scripts -->

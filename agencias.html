@@ -107,21 +107,37 @@
       </div>
     </nav>
 
-    <main class="seccion contenedor">
-      <h1 class="titulo-seccion">Agencias de Turismo Recomendadas</h1>
-      <p style="text-align: center; margin-bottom: 2rem">
-        Pasá el cursor sobre las tarjetas para ver los perfiles y detalles de
-        contacto de las agencias.
-      </p>
+    <main class="py-5 container">
+        <h1 class="titulo-seccion">Agencias de Turismo Recomendadas</h1>
+        <p class="text-center mb-5">
+            Haz clic sobre las tarjetas para ver los perfiles y detalles de
+            contacto de las agencias.
+        </p>
 
-      <div class="grilla-agencias">
-        <!-- Tarjeta 1 -->
-        <div class="tarjeta-giratoria">
-          <div class="giratoria-interior">
-            <div class="giratoria-frontal">
-              <h3>Norte Extremo</h3>
-              <p>Especialistas en Aventura</p>
-              <div class="estrellas">★★★★★</div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="tarjeta-giratoria" role="button" tabindex="0">
+                    <div class="giratoria-interior">
+                        <div class="giratoria-frontal">
+                            <h3>Norte Extremo</h3>
+                            <p>Especialistas en Aventura</p>
+                            <div class="estrellas-rating" data-rating="5">
+                                <i class="bi bi-star-fill text-warning" data-val="1"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="2"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="3"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="4"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="5"></i>
+                            </div>
+                        </div>
+                        <div class="giratoria-trasera">
+                            <h4>Contacto</h4>
+                            <p>Tel: +54 9 388 123-4567</p>
+                            <p>Info@norteextremo.ar</p>
+                            <a href="contacto.html" class="btn btn-danger mt-3">Consultar</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="giratoria-trasera">
               <h4>Contacto</h4>
@@ -134,13 +150,29 @@
           </div>
         </div>
 
-        <!-- Tarjeta 2 -->
-        <div class="tarjeta-giratoria">
-          <div class="giratoria-interior">
-            <div class="giratoria-frontal">
-              <h3>Caminos Jujeños</h3>
-              <p>Tours Culturales</p>
-              <div class="estrellas">★★★★☆</div>
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="tarjeta-giratoria" role="button" tabindex="0">
+                    <div class="giratoria-interior">
+                        <div class="giratoria-frontal">
+                            <h3>Caminos Jujeños</h3>
+                            <p>Tours Culturales</p>
+                            <div class="estrellas-rating" data-rating="4">
+                                <i class="bi bi-star-fill text-warning" data-val="1"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="2"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="3"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="4"></i>
+                                <i class="bi bi-star text-warning" data-val="5"></i>
+                            </div>
+                        </div>
+                        <div class="giratoria-trasera">
+                            <h4>Contacto</h4>
+                            <p>Tel: +54 9 388 987-6543</p>
+                            <p>contacto@caminosjujuy.ar</p>
+                            <a href="contacto.html" class="btn btn-danger mt-3">Consultar</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="giratoria-trasera">
               <h4>Contacto</h4>
@@ -153,13 +185,29 @@
           </div>
         </div>
 
-        <!-- Tarjeta 3 -->
-        <div class="tarjeta-giratoria">
-          <div class="giratoria-interior">
-            <div class="giratoria-frontal">
-              <h3>Alto Vuelo</h3>
-              <p>Viajes VIP & Premium</p>
-              <div class="estrellas">★★★★★</div>
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="tarjeta-giratoria" role="button" tabindex="0">
+                    <div class="giratoria-interior">
+                        <div class="giratoria-frontal">
+                            <h3>Alto Vuelo</h3>
+                            <p>Viajes VIP & Premium</p>
+                            <div class="estrellas-rating" data-rating="5">
+                                <i class="bi bi-star-fill text-warning" data-val="1"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="2"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="3"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="4"></i>
+                                <i class="bi bi-star-fill text-warning" data-val="5"></i>
+                            </div>
+                        </div>
+                        <div class="giratoria-trasera">
+                            <h4>Contacto</h4>
+                            <p>Tel: +54 9 388 555-1234</p>
+                            <p>reservas@altovuelo.com</p>
+                            <a href="contacto.html" class="btn btn-danger mt-3">Consultar</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="giratoria-trasera">
               <h4>Contacto</h4>
@@ -177,75 +225,72 @@
     <!-- Footer -->
     <footer class="pie-pagina">
       <div class="container px-4 px-sm-0">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">
-              Newsletter
-            </h3>
-            <p>Recibí ofertas únicas para visitar Jujuy.</p>
-            <form
-              id="formulario-newsletter"
-              class="form-suscripcion"
-              novalidate
-            >
-              <div class="mb-3">
-                <input
-                  type="email"
-                  id="newsletter-email"
-                  name="newsletter-email"
-                  class="form-control"
-                  placeholder="Tu email"
-                  required
-                />
-                <div
-                  class="mensaje-error"
-                  id="newsletter-error"
-                  aria-live="polite"
-                ></div>
-              </div>
-              <div class="mb-3">
-                <button type="submit" class="btn btn-danger w-100">
-                  Suscribir
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">
-              Nuestras Redes
-            </h3>
-            <a href="https://reddit.com" class="d-flex pt-2">
-              <span class="sprite sprite-reddit me-2"></span>
-              Reddit
-            </a>
-            <a href="https://facebook.com" class="d-flex pt-2">
-              <span class="sprite sprite-facebook me-2"></span>
-              Facebook
-            </a>
-            <a href="https://whatsapp.com" class="d-flex pt-2">
-              <span class="sprite sprite-whatsapp me-2"></span>
-              Whatsapp
-            </a>
-          </div>
-          <div class="col">
-            <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
-            <div class="mb-2">
-              <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy,
-              Argentina
-            </div>
-            <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
-              width="100%"
-              height="150"
-              style="border: 0"
-              loading="lazy"
-            ></iframe>
-          </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <!-- Newsletter -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Newsletter</h3>
+      <p>Recibí ofertas únicas para visitar Jujuy.</p>
+      <form
+        id="formulario-newsletter"
+        class="form-suscripcion"
+        novalidate
+      >
+        <div class="mb-3">
+          <input
+            type="email"
+            id="newsletter-email"
+            name="newsletter-email"
+            class="form-control"
+            placeholder="Tu email"
+            required
+          />
+          <div
+            class="mensaje-error"
+            id="newsletter-error"
+            aria-live="polite"
+          ></div>
         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-danger w-100">
+            Suscribir
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Nuestras Redes</h3>
+      <a href="https://reddit.com" class="d-flex pt-2">
+        <span class="sprite sprite-reddit me-2"></span>
+        Reddit
+      </a>
+      <a href="https://facebook.com" class="d-flex pt-2">
+        <span class="sprite sprite-facebook me-2"></span>
+        Facebook
+      </a>
+      <a href="https://whatsapp.com" class="d-flex pt-2">
+        <span class="sprite sprite-whatsapp me-2"></span>
+        Whatsapp
+      </a>
+    </div>
+
+    <!-- Ubicación -->
+    <div class="col">
+      <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
+      <div class="mb-2">
+        <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy, Argentina
       </div>
-      <div class="text-center border-top pt-3 mt-3">
-        &copy; 2026 - DestinoJujuy.
-      </div>
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+        width="100%"
+        height="150"
+        style="border: 0"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</div>
     </footer>
 
     <!-- Scripts -->
