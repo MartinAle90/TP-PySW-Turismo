@@ -5,15 +5,12 @@ $(function () {
   const $destino = $("#destino");
   const $mensaje = $("#mensaje");
   const $spinner = $("#spinner-envio");
-  const $newsletterForm = $("#formulario-newsletter");
-  const $newsletterEmail = $("#newsletter-email");
-  const $modalPhishing = document.getElementById("modalPhishing")
-    ? new bootstrap.Modal(document.getElementById("modalPhishing"))
-    : null;
-
-  const $modalExito = document.getElementById("modalExito")
-    ? new bootstrap.Modal(document.getElementById("modalExito"))
-    : null;
+  const $modalPhishing = new bootstrap.Modal(
+    document.getElementById("modalPhishing"),
+  );
+  const $modalExito = new bootstrap.Modal(
+    document.getElementById("modalExito"),
+  );
 
   const trustedDomains = [
     "gmail.com",
@@ -127,59 +124,6 @@ $(function () {
     return true;
   }
 
-  function isEmailFormatValid(value) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(value);
-  }
-
-  function validarEmailNewsletter() {
-    const value = $newsletterEmail.val().trim();
-    const $message = $("#newsletter-error");
-    if (!value) {
-      $message.text("Ingresá un correo electrónico para la newsletter.");
-      $message.css("color", "#b81212");
-      return false;
-    }
-    if (!isEmailFormatValid(value)) {
-      $message.text("Ingresá un correo con formato válido.");
-      $message.css("color", "#b81212");
-      return false;
-    }
-    $message.text("");
-    return true;
-  }
-
-  function isNombreValid() {
-    return $nombre.val().trim().length >= 3;
-  }
-
-  function isEmailValid() {
-    const value = $email.val().trim();
-    return value && isEmailFormatValid(value);
-  }
-
-  function isDestinoSelected() {
-    return !!$destino.val();
-  }
-
-  function isMensajeValid() {
-    return $mensaje.val().trim().length >= 10;
-  }
-
-  function isNewsletterEmailValid() {
-    const value = $newsletterEmail.val().trim();
-    return value && isEmailFormatValid(value);
-  }
-
-  function updateSubmitButtonState() {
-    const isValid =
-      isNombreValid() &&
-      isEmailValid() &&
-      isDestinoSelected() &&
-      isMensajeValid();
-    $form.find("button[type='submit']").prop("disabled", !isValid);
-  }
-
   function validarFormulario() {
     const nombreValido = validarNombre();
     const emailValido = validarEmail();
@@ -219,23 +163,10 @@ $(function () {
     };
   }
 
-  $nombre.on("input", () => {
-    validarNombre();
-    updateSubmitButtonState();
-  });
-  $email.on("input", () => {
-    validarEmail();
-    updateSubmitButtonState();
-  });
-  $destino.on("change", () => {
-    validarDestino();
-    updateSubmitButtonState();
-  });
-  $mensaje.on("input", () => {
-    validarMensaje();
-    updateSubmitButtonState();
-  });
-  $newsletterEmail.on("input", validarEmailNewsletter);
+  $nombre.on("input", validarNombre);
+  $email.on("input", validarEmail);
+  $destino.on("change", validarDestino);
+  $mensaje.on("input", validarMensaje);
 
   $("#boton-phishing").on("click", () => {
     $("#phishing-feedback").text("");
@@ -247,26 +178,6 @@ $(function () {
     const resultadoObj = verificarCorreoPhishing(emailEjemplo);
     showPhishingResult(emailEjemplo, resultadoObj.message, resultadoObj.isSafe);
   });
-
-  $newsletterForm.on("submit", (event) => {
-    event.preventDefault();
-    if (!validarEmailNewsletter()) {
-      return;
-    }
-    const $submit = $newsletterForm.find("button[type='submit']");
-    $submit.prop("disabled", true);
-    const $message = $("#newsletter-error");
-    $message
-      .css("color", "#19692c")
-      .text("¡Gracias! Te enviaremos novedades pronto.");
-    setTimeout(() => {
-      $submit.prop("disabled", false);
-      $newsletterForm[0].reset();
-      $message.text("");
-    }, 1200);
-  });
-
-  updateSubmitButtonState();
 
   $form.on("submit", (event) => {
     event.preventDefault();

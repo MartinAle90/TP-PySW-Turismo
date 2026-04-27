@@ -1,110 +1,67 @@
 <!doctype html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Blog — Turismo en Jujuy</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="./css/sprites.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- NavBar -->
-    <nav
-      class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-secondary shadow sticky-top"
-    >
-      <div class="container-fluid">
-        <!-- Logo con SVG -->
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            class="me-2"
-          >
-            <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
-          </svg>
-          <span class="fw-bold">DestinoJujuy</span>
-        </a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-secondary shadow sticky-top">
+        <div class="container-fluid">
+            <!-- Logo con SVG -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="me-2">
+                    <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
+                </svg>
+                <span class="fw-bold">DestinoJujuy</span>
+            </a>
 
-        <!-- Botón hamburguesa Bootstrap -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
-          aria-controls="navbarContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Botón hamburguesa Bootstrap -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Contenido colapsable -->
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="destinos.html"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Destinos
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="destinos.html">Ver Todos</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Quebrada</a></li>
-                <li><a class="dropdown-item" href="#">Yungas</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="agencias.html">Agencias</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="precios.html">Precios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
+            <!-- Contenido colapsable -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="destinos.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Destinos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="destinos.html">Ver Todos</a></li>
+                            <li><a class="dropdown-item" href="#">Quebrada</a></li>
+                            <li><a class="dropdown-item" href="#">Yungas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
 
-          <!-- Botón tema claro/oscuro -->
-          <button
-            id="boton-tema"
-            class="btn btn-outline-secondary ms-lg-3"
-            aria-label="Cambiar modo claro/oscuro"
-          >
-            <i class="bi bi-moon-stars-fill"></i> /
-            <i class="bi bi-sun-fill"></i>
-          </button>
+                <!-- Botón tema claro/oscuro -->
+                <button id="boton-tema" class="btn btn-outline-secondary ms-lg-3"
+                    aria-label="Cambiar modo claro/oscuro">
+                    <i class="bi bi-moon-stars-fill"></i> / <i class="bi bi-sun-fill"></i>
+                </button>
+            </div>
         </div>
-      </div>
     </nav>
 
     <main class="py-5 container">
@@ -124,25 +81,24 @@
                         Conocé cómo participar y la agenda completa.
                     </p>
 
-      <div class="seccion-blog">
-        <div>
-          <article class="articulo-blog">
-            <img src="assets\purmamarca.jpg" alt="Noticia 1" />
-            <h2>Preparativos para el Festival de la Quebrada</h2>
-            <p
-              style="
-                color: var(--color-resalte);
-                font-weight: bold;
-                margin-bottom: 1rem;
-              "
-            >
-              Cultura | Enero 2026
-            </p>
-            <p>
-              La Quebrada de Humahuaca se prepara para uno de sus festivales
-              culturales más importantes del año. Conocé cómo participar y la
-              agenda completa.
-            </p>
+                    <div class="comentarios">
+                        <h3>Comentarios (2)</h3>
+                        <div class="comentario-item">
+                            <div class="avatar">MA</div>
+                            <div>
+                                <strong>Martina Álvarez</strong>
+                                <p>Excelente! Este año no me lo pierdo.</p>
+                            </div>
+                        </div>
+                        <div class="comentario-item">
+                            <div class="avatar">CJ</div>
+                            <div>
+                                <strong>Carlos Juárez</strong>
+                                <p>Recomiendan algún hospedaje cerca?</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
                 <article class="articulo-blog scroll-animate" data-category="naturaleza">
                     <img src="assets\salinas.jpg" alt="Noticia 2" />
@@ -157,7 +113,6 @@
                     </p>
                 </article>
             </div>
-          </article>
 
             <!-- Sidebar -->
             <aside class="col-lg-4">
@@ -185,121 +140,58 @@
                 </div>
             </aside>
         </div>
-
-        <!-- Sidebar -->
-        <aside>
-          <div class="articulo-blog" style="padding: 1.5rem">
-            <h3
-              style="
-                margin-bottom: 1rem;
-                border-bottom: 2px solid var(--color-resalte);
-                padding-bottom: 0.5rem;
-              "
-            >
-              Categorías
-            </h3>
-            <ul>
-              <li style="margin-bottom: 0.5rem">
-                <a href="#">&#9656; Cultura</a>
-              </li>
-              <li style="margin-bottom: 0.5rem">
-                <a href="#">&#9656; Naturaleza</a>
-              </li>
-              <li style="margin-bottom: 0.5rem">
-                <a href="#">&#9656; Gastronomía</a>
-              </li>
-              <li style="margin-bottom: 0.5rem">
-                <a href="#">&#9656; Guías de Viaje</a>
-              </li>
-            </ul>
-          </div>
-        </aside>
-      </div>
     </main>
 
     <!-- Footer -->
     <footer class="pie-pagina">
-      <div class="container px-4 px-sm-0">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-    <!-- Newsletter -->
-    <div class="col">
-      <h3 class="border-bottom border-danger border-2 pb-2">Newsletter</h3>
-      <p>Recibí ofertas únicas para visitar Jujuy.</p>
-      <form
-        id="formulario-newsletter"
-        class="form-suscripcion"
-        novalidate
-      >
-        <div class="mb-3">
-          <input
-            type="email"
-            id="newsletter-email"
-            name="newsletter-email"
-            class="form-control"
-            placeholder="Tu email"
-            required
-          />
-          <div
-            class="mensaje-error"
-            id="newsletter-error"
-            aria-live="polite"
-          ></div>
+        <div class="container px-4 px-sm-0">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="col">
+                    <h3 class="border-bottom border-danger border-2 pb-2">Newsletter</h3>
+                    <p>Recibí ofertas únicas para visitar Jujuy.</p>
+                    <form class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-danger">Suscribir</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <h3 class="border-bottom border-danger border-2 pb-2">Nuestras Redes</h3>
+                    <a href="https://reddit.com" class="d-flex pt-2">
+                        <span class="sprite sprite-reddit me-2"></span>
+                        Reddit
+                    </a>
+                    <a href="https://facebook.com" class="d-flex pt-2">
+                        <span class="sprite sprite-facebook me-2"></span>
+                        Facebook
+                    </a>
+                    <a href="https://whatsapp.com" class="d-flex pt-2">
+                        <span class="sprite sprite-whatsapp me-2"></span>
+                        Whatsapp
+                    </a>
+                </div>
+                <div class="col">
+                    <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
+                    <div class="mb-2">
+                        <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy, Argentina
+                    </div>
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
+                        width="100%" height="150" class="border-0" loading="lazy"></iframe>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-          <button type="submit" class="btn btn-danger w-100">
-            Suscribir
-          </button>
+        <div class="text-center border-top pt-3 mt-3">
+            &copy; 2026 - DestinoJujuy.
         </div>
-      </form>
-    </div>
-
-    <!-- Redes sociales -->
-    <div class="col">
-      <h3 class="border-bottom border-danger border-2 pb-2">Nuestras Redes</h3>
-      <a href="https://reddit.com" class="d-flex pt-2">
-        <span class="sprite sprite-reddit me-2"></span>
-        Reddit
-      </a>
-      <a href="https://facebook.com" class="d-flex pt-2">
-        <span class="sprite sprite-facebook me-2"></span>
-        Facebook
-      </a>
-      <a href="https://whatsapp.com" class="d-flex pt-2">
-        <span class="sprite sprite-whatsapp me-2"></span>
-        Whatsapp
-      </a>
-    </div>
-
-    <!-- Ubicación -->
-    <div class="col">
-      <h3 class="border-bottom border-danger border-2 pb-2">Ubicación</h3>
-      <div class="mb-2">
-        <i class="bi bi-geo-alt-fill"></i> San Salvador de Jujuy, Argentina
-      </div>
-      <iframe
-        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
-        width="100%"
-        height="150"
-        style="border: 0"
-        loading="lazy"
-      ></iframe>
-    </div>
-  </div>
-</div>
     </footer>
 
     <!-- Scripts -->
-    <script
-      src="https://code.jquery.com/jquery-4.0.0.min.js"
-      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <script src="scripts.js"></script>
-    <script src="js/validaciones.js"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>
