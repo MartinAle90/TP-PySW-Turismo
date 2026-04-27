@@ -6,6 +6,82 @@ document.addEventListener("DOMContentLoaded", () => {
     (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl),
   );
 
+  // --- Animación Hero ---
+  $(".hero h1, .hero p, .hero a").hide().fadeIn(1500);
+
+  // --- Filtro Destinos ---
+  $(".btn-filtro").on("click", function() {
+    $(".btn-filtro").removeClass("active");
+    $(this).addClass("active");
+    
+    const filterValue = $(this).attr("data-filter");
+    if(filterValue === "all") {
+      $(".item-destino").show(400);
+    } else {
+      $(".item-destino").hide().filter(`[data-category="${filterValue}"]`).show(400);
+    }
+  });
+
+  // --- Zoom Cards Destinos ---
+  $(".zoom-card").on("mouseenter", function() {
+    $(this).addClass("zoom-activo");
+  }).on("mouseleave", function() {
+    $(this).removeClass("zoom-activo");
+  });
+
+  // --- Efecto Flip Agencias ---
+  $(".tarjeta-giratoria").on("click", function() {
+    $(this).find(".giratoria-interior").toggleClass("flipped");
+  });
+
+  // --- Rating Agencias ---
+  $(".estrellas-rating i").on("click", function(e) {
+    e.stopPropagation(); // Evitar voltear la tarjeta al puntuar
+    const value = parseInt($(this).attr("data-val"));
+    const container = $(this).parent();
+    container.attr("data-rating", value);
+    
+    container.find("i").removeClass("bi-star-fill bi-star");
+    container.find("i").each(function() {
+      const starVal = parseInt($(this).attr("data-val"));
+      if(starVal <= value) {
+        $(this).addClass("bi-star-fill");
+      } else {
+        $(this).addClass("bi-star");
+      }
+    });
+  });
+
+  // --- Filtro Blog ---
+  $(".filtro-blog").on("click", function(e) {
+    e.preventDefault();
+    $(".filtro-blog").removeClass("fw-bold");
+    $(this).addClass("fw-bold");
+    
+    const filterValue = $(this).attr("data-filter");
+    if(filterValue === "all") {
+      $(".articulo-blog").show(400);
+    } else {
+      $(".articulo-blog:not(aside .articulo-blog)").hide().filter(`[data-category="${filterValue}"]`).show(400);
+    }
+  });
+
+  // --- Animación Scroll con Intersection Observer ---
+  const animateElements = document.querySelectorAll(".scroll-animate");
+  if(animateElements.length > 0) {
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          $(entry.target).hide().fadeIn(800);
+          $(entry.target).removeClass("scroll-animate");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    animateElements.forEach(el => scrollObserver.observe(el));
+  }
+
   // --- Lógica del Modo Oscuro ---
   const botonTema = document.getElementById("boton-tema");
   if (botonTema) {

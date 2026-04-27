@@ -1,3 +1,6 @@
+/* ========================================= */
+/* 1. VARIABLES Y RESET                      */
+/* ========================================= */
 :root {
     /* Paleta de colores */
     --color-primario: #1a3644;
@@ -33,7 +36,8 @@
     --color-texto: #f9f6f0;
     --color-blanco: #2a2a2a;
     --color-borde: #444;
-    --color-texto-inverso: #f0f6fc; /* Un blanco ligeramente azulado para el modo oscuro */
+    --color-texto-inverso: #f0f6fc;
+    /* Un blanco ligeramente azulado para el modo oscuro */
     --color-control: #1f2937;
     --color-control-borde: #475569;
     --color-control-texto: #e5e7eb;
@@ -83,50 +87,10 @@ video {
     outline-offset: 2px;
 }
 
-.contenedor {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.boton {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--color-resalte);
-    color: var(--color-texto-inverso);
-    border: none;
-    border-radius: var(--radio-borde);
-    cursor: pointer;
-    font-weight: bold;
-    transition:
-        background-color 0.3s,
-        transform 0.2s;
-}
-
-.boton:hover {
-    background-color: var(--color-primario);
-    transform: translateY(-2px);
-}
-
-.hero {
-    min-height: 60vh;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.seccion {
-    padding: 4rem 0;
-}
+/* ========================================= */
+/* 2. UTILIDADES GENERALES                   */
+/* ========================================= */
 
 .titulo-seccion {
     text-align: center;
@@ -135,31 +99,44 @@ video {
     margin-bottom: var(--espaciado-grande);
 }
 
-/* Estilos para la tarjeta de testimonio dentro del carrusel de Bootstrap */
-.tarjetaCarrusel {
-    max-width: 600px; /* Ancho máximo de la tarjeta */
-    margin: 0 auto; /* Centrar la tarjeta dentro del slide */
-    min-height: 150px;
-    background-color: var(--color-blanco);
-    border-radius: var(--radio-borde);
-    box-shadow: var(--sombra);
-    border-top: 4px solid var(--color-primario);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.75rem;
-    text-align: center;
+.text-primario {
+    color: var(--color-primario) !important;
 }
 
-.tarjetaCarrusel p {
-    font-size: 1.05rem;
-    line-height: 1.5;
+.text-resalte {
+    color: var(--color-resalte) !important;
 }
 
-.autorItem {
-    color: var(--color-primario);
-    align-self: flex-end;
-    font-weight: 700;
+
+/* ========================================= */
+/* 3. COMPONENTES GLOBALES (HEADER/FOOTER)   */
+/* ========================================= */
+
+.logo svg {
+    transition: transform 0.4s ease;
+}
+
+.logo:hover svg {
+    transform: rotate(-12deg) scale(1.15);
+    stroke: var(--color-resalte);
+}
+
+.pie-pagina {
+    background: linear-gradient(to right,
+            var(--color-primario),
+            var(--color-secundario));
+    color: var(--color-texto-inverso);
+    padding: var(--espaciado-grande) 0;
+    margin-top: var(--espaciado-grande);
+}
+
+
+/* ========================================= */
+/* 4. HOME & CARRUSELES                      */
+/* ========================================= */
+
+.hero {
+    min-height: 60vh;
 }
 
 /* Retenemos estrictamente lo vinculado a tus variables de Modo Oscuro/Temáticas */
@@ -185,29 +162,27 @@ video {
     display: grid;
 }
 
-/* Página: Destinos */
-.filtros-css {
-    display: flex;
-    justify-content: center;
-    gap: var(--espaciado-medio);
-    margin-bottom: var(--espaciado-grande);
-    flex-wrap: wrap;
+/* Contador Animado */
+.contador-seccion {
+    background: linear-gradient(45deg,
+            var(--color-primario),
+            var(--color-secundario));
+    color: var(--color-texto-inverso);
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 3rem 0;
 }
 
-.filtros-css label {
-    background-color: var(--color-blanco);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    cursor: pointer;
+.contador-numero {
+    font-size: 4rem;
     font-weight: bold;
-    border: 1px solid var(--color-borde);
+    color: var(--color-oro);
 }
 
-/* Masonry Grid */
-.grilla-masonry {
-    columns: 3 250px;
-    gap: var(--espaciado-medio);
-}
+
+/* ========================================= */
+/* 5. DESTINOS Y PRECIOS                     */
+/* ========================================= */
 
 .card,
 .item-masonry {
@@ -216,7 +191,8 @@ video {
     position: relative;
     border-radius: var(--radio-borde);
     overflow: hidden;
-    border: none; /* Para las cards de bootstrap */
+    border: none;
+    /* Para las cards de bootstrap */
 }
 
 .card img,
@@ -243,7 +219,7 @@ video {
     padding: var(--espaciado-medio);
     opacity: 0;
     transition: opacity 0.3s;
-    padding-top: 2rem; /* Más espacio para que el gradiente se vea bien */
+    padding-top: 2rem;
 }
 
 .card:hover .overlay-masonry,
@@ -251,31 +227,54 @@ video {
     opacity: 1;
 }
 
-/* --- CONTADOR ANIMADO (Keyframes Avanzados) --- */
-.contador-seccion {
-    background: linear-gradient(
-        45deg,
-        var(--color-primario),
-        var(--color-secundario)
-    );
+.tabla-contenedor {
+    overflow-x: auto;
+    background-color: var(--color-blanco);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra);
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 2% 100%);
+    transition: clip-path 0.4s ease;
+}
+
+.tabla-contenedor:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+    padding: var(--espaciado-medio);
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.tabla-precios th {
+    background-color: var(--color-primario);
     color: var(--color-texto-inverso);
-    text-align: center;
-    padding: 4rem 2rem;
-    margin: 3rem 0;
 }
 
-.contador-numero {
-    font-size: 4rem;
-    font-weight: bold;
-    color: var(--color-oro);
+.tabla-precios tr:hover {
+    background-color: var(--color-fondo);
 }
 
-/* Página: Agencias */
-.grilla-agencias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--espaciado-grande);
+.scroll-snap-container {
+    scroll-snap-type: y proximity;
+    overflow-y: auto;
+    max-height: 420px;
 }
+
+.tabla-precios tr {
+    scroll-snap-align: start;
+}
+
+
+/* ========================================= */
+/* 6. AGENCIAS                               */
+/* ========================================= */
 
 .tarjeta-giratoria {
     background-color: transparent;
@@ -293,7 +292,7 @@ video {
     transform-style: preserve-3d;
 }
 
-.tarjeta-giratoria:hover .giratoria-interior {
+.tarjeta-giratoria .giratoria-interior.flipped {
     transform: rotateY(180deg);
 }
 
@@ -329,81 +328,10 @@ video {
     font-size: 1.5rem;
 }
 
-/* Página: Precios */
-.tabla-contenedor {
-    overflow-x: auto;
-    background-color: var(--color-blanco);
-    border-radius: var(--radio-borde);
-    box-shadow: var(--sombra);
-    clip-path: polygon(0 0, 100% 0, 100% 98%, 2% 100%);
-    transition: clip-path 0.4s ease;
-}
 
-.tabla-contenedor:hover {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.tabla-precios {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.tabla-precios th,
-.tabla-precios td {
-    padding: var(--espaciado-medio);
-    text-align: left;
-    border-bottom: 1px solid var(--color-borde);
-}
-
-.tabla-precios th {
-    background-color: var(--color-primario);
-    color: var(--color-texto-inverso);
-}
-
-.tabla-precios tr:hover {
-    background-color: var(--color-fondo);
-}
-
-.tooltip {
-    display: inline-block;
-    background-color: #eee;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #333;
-    cursor: help;
-    position: relative;
-    margin-left: 5px;
-}
-
-.tooltip::after {
-    content: attr(data-texto);
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-secundario);
-    color: var(--color-texto-inverso);
-    padding: 5px 10px;
-    border-radius: 4px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-}
-
-.tooltip:hover::after {
-    opacity: 1;
-}
-
-/* Página: Blog */
-.seccion-blog {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: var(--espaciado-grande);
-}
+/* ========================================= */
+/* 7. BLOG                                   */
+/* ========================================= */
 
 .articulo-blog {
     background-color: var(--color-blanco);
@@ -442,168 +370,27 @@ video {
     font-weight: bold;
 }
 
-/* Página: Contacto */
-.formulario-contacto {
-    background-color: var(--color-blanco);
-    padding: var(--espaciado-grande);
-    border-radius: var(--radio-borde);
-    box-shadow: var(--sombra);
-    max-width: 600px;
-    margin: 0 auto;
+
+/* ========================================= */
+/* 8. INTERACCIONES JS (UTILITIES)           */
+/* ========================================= */
+
+.zoom-activo {
+    transform: scale(1.05);
+    z-index: 2;
 }
 
-.grupo-form {
-    margin-bottom: var(--espaciado-medio);
-}
-
-.grupo-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: var(--espaciado-chico);
-}
-
-.grupo-form input,
-.grupo-form select,
-.grupo-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--color-borde);
-    border-radius: var(--radio-borde);
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-}
-
-.grupo-form input:focus,
-.grupo-form textarea:focus {
-    outline: 2px solid var(--color-primario);
-}
-
-/* Validaciones CSS */
-.grupo-form input:focus:invalid {
-    border-color: red;
-    outline-color: red;
-}
-
-.grupo-form input:focus:valid {
-    border-color: green;
-    outline-color: green;
-}
-
-.spinner {
-    display: none;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top-color: var(--color-texto-inverso);
-    animation: girar 1s linear infinite;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-@keyframes girar {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.cargando .spinner {
-    display: inline-block;
-}
-
-.modal-exito {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--color-blanco);
-    padding: var(--espaciado-grande);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    border-radius: var(--radio-borde);
-    text-align: center;
-    z-index: 1000;
-}
-
-/* Footer */
-.pie-pagina {
-    background: linear-gradient(
-        to right,
-        var(--color-primario),
-        var(--color-secundario)
-    );
-    color: var(--color-texto-inverso);
-    padding: var(--espaciado-grande) 0;
-    margin-top: var(--espaciado-grande);
-}
-
-.form-suscripcion {
-    display: flex;
-}
-
-.form-suscripcion input {
-    padding: 0.5rem;
-    flex: 1;
-    border: none;
-    border-radius: 4px 0 0 4px;
-}
-
-.form-suscripcion button {
-    padding: 0.5rem;
-    background-color: var(--color-resalte);
-    color: var(--color-texto-inverso);
-    border: none;
-    border-radius: 0 4px 4px 0;
+.estrellas-rating i {
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
-/* Mostrar error una vez que el usuario ya interactuó con el campo */
-.grupo-form input:user-invalid,
-.grupo-form select:user-invalid,
-.grupo-form textarea:user-invalid {
-    border-color: var(--color-error);
-    background-color: var(--color-error-fondo);
+.estrellas-rating i:hover {
+    transform: scale(1.2);
 }
 
-.scroll-snap-container {
-    scroll-snap-type: y proximity;
-    overflow-y: auto;
-    max-height: 420px;
-}
-
-.tabla-precios tr {
-    scroll-snap-align: start;
-}
-
-/* Micro-interacción en inputs y selects */
-.grupo-form input,
-.grupo-form select,
-.grupo-form textarea {
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.grupo-form input:focus,
-.grupo-form select:focus,
-.grupo-form textarea:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(184, 77, 24, 0.15);
-}
-
-/* Micro-interacción en botón de enviar */
-.boton {
-    position: relative;
-    overflow: hidden;
-}
-
-.boton:active {
-    transform: scale(0.95);
-}
-
-.logo svg {
-    transition: transform 0.4s ease;
-}
-
-.logo:hover svg {
-    transform: rotate(-12deg) scale(1.15);
-    stroke: var(--color-resalte);
+.btn-filtro.active {
+    background-color: var(--color-primario);
+    color: var(--color-texto-inverso);
+    border-color: var(--color-primario);
 }
