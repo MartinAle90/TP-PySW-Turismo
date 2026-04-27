@@ -112,11 +112,11 @@ video {
 /* 3. COMPONENTES GLOBALES (HEADER/FOOTER)   */
 /* ========================================= */
 
-.logo svg {
+.navbar-brand svg {
     transition: transform 0.4s ease;
 }
 
-.logo:hover svg {
+.navbar-brand:hover svg {
     transform: rotate(-12deg) scale(1.15);
     stroke: var(--color-resalte);
 }
@@ -184,8 +184,7 @@ video {
 /* 5. DESTINOS Y PRECIOS                     */
 /* ========================================= */
 
-.card,
-.item-masonry {
+.card {
     break-inside: avoid;
     margin-bottom: var(--espaciado-medio);
     position: relative;
@@ -195,8 +194,7 @@ video {
     /* Para las cards de bootstrap */
 }
 
-.card img,
-.item-masonry img {
+.card img {
     border-radius: var(--radio-borde);
     transition: transform 0.4s;
     width: 100%;
@@ -204,8 +202,7 @@ video {
     object-fit: cover;
 }
 
-.card:hover img,
-.item-masonry:hover img {
+.card:hover img {
     transform: scale(1.05);
 }
 
@@ -222,8 +219,7 @@ video {
     padding-top: 2rem;
 }
 
-.card:hover .overlay-masonry,
-.item-masonry:hover .overlay-masonry {
+.card:hover .overlay-masonry {
     opacity: 1;
 }
 
