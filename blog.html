@@ -64,19 +64,15 @@
         </div>
     </nav>
 
-    <main class="seccion contenedor">
+    <main class="py-5 container">
         <h1 class="titulo-seccion">Blog y Noticias</h1>
 
-        <div class="seccion-blog">
-            <div>
-                <article class="articulo-blog">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <article class="articulo-blog scroll-animate" data-category="cultura">
                     <img src="assets\purmamarca.jpg" alt="Noticia 1" />
                     <h2>Preparativos para el Festival de la Quebrada</h2>
-                    <p style="
-                                color: var(--color-resalte);
-                                font-weight: bold;
-                                margin-bottom: 1rem;
-                            ">
+                    <p class="text-resalte fw-bold mb-3">
                         Cultura | Enero 2026
                     </p>
                     <p>
@@ -104,14 +100,10 @@
                     </div>
                 </article>
 
-                <article class="articulo-blog">
+                <article class="articulo-blog scroll-animate" data-category="naturaleza">
                     <img src="assets\salinas.jpg" alt="Noticia 2" />
                     <h2>Nuevos senderos habilitados en las Yungas</h2>
-                    <p style="
-                                color: var(--color-resalte);
-                                font-weight: bold;
-                                margin-bottom: 1rem;
-                            ">
+                    <p class="text-resalte fw-bold mb-3">
                         Naturaleza | Diciembre 2025
                     </p>
                     <p>
@@ -123,27 +115,26 @@
             </div>
 
             <!-- Sidebar -->
-            <aside>
-                <div class="articulo-blog" style="padding: 1.5rem">
-                    <h3 style="
-                                margin-bottom: 1rem;
-                                border-bottom: 2px solid var(--color-resalte);
-                                padding-bottom: 0.5rem;
-                            ">
+            <aside class="col-lg-4">
+                <div class="articulo-blog p-4">
+                    <h3 class="border-bottom border-danger border-2 pb-2 mb-3">
                         Categorías
                     </h3>
                     <ul>
-                        <li style="margin-bottom: 0.5rem">
-                            <a href="#">&#9656; Cultura</a>
+                        <li class="mb-2">
+                            <a href="#" class="filtro-blog active" data-filter="all">&#9656; Todas</a>
                         </li>
-                        <li style="margin-bottom: 0.5rem">
-                            <a href="#">&#9656; Naturaleza</a>
+                        <li class="mb-2">
+                            <a href="#" class="filtro-blog" data-filter="cultura">&#9656; Cultura</a>
                         </li>
-                        <li style="margin-bottom: 0.5rem">
-                            <a href="#">&#9656; Gastronomía</a>
+                        <li class="mb-2">
+                            <a href="#" class="filtro-blog" data-filter="naturaleza">&#9656; Naturaleza</a>
                         </li>
-                        <li style="margin-bottom: 0.5rem">
-                            <a href="#">&#9656; Guías de Viaje</a>
+                        <li class="mb-2">
+                            <a href="#" class="filtro-blog" data-filter="gastronomia">&#9656; Gastronomía</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="filtro-blog" data-filter="guias">&#9656; Guías de Viaje</a>
                         </li>
                     </ul>
                 </div>
@@ -158,11 +149,9 @@
                 <div class="col">
                     <h3 class="border-bottom border-danger border-2 pb-2">Newsletter</h3>
                     <p>Recibí ofertas únicas para visitar Jujuy.</p>
-                    <form>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Tu email" required>
-                        </div>
-                        <button type="submit" class="btn btn-danger w-100">Suscribir</button>
+                    <form class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-danger">Suscribir</button>
                     </form>
                 </div>
                 <div class="col">
@@ -187,7 +176,7 @@
                     </div>
                     <iframe
                         src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3400%2C-24.2100%2C-65.2600%2C-24.1600"
-                        width="100%" height="150" style="border: 0" loading="lazy"></iframe>
+                        width="100%" height="150" class="border-0" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -202,7 +191,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
